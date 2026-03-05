@@ -1,0 +1,25 @@
+{
+  "name": "@diagramz/mcp-server",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "diagramz-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@diagramz/shared": "workspace:*",
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
