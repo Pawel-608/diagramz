@@ -114,8 +114,31 @@ class TextShape extends Shape {
     return new Float64Array(0)
   }
 
-  clipPoint(w: number, h: number, _angle: number): [number, number] {
-    return [w / 2, h / 2]
+  clipPoint(w: number, h: number, angle: number): [number, number] {
+    const cx = w / 2, cy = h / 2
+    const cos = Math.cos(angle), sin = Math.sin(angle)
+
+    if (cos > 1e-9) {
+      const t = (w - cx) / cos
+      const y = cy + t * sin
+      if (y >= 0 && y <= h) return [w, y]
+    }
+    if (cos < -1e-9) {
+      const t = -cx / cos
+      const y = cy + t * sin
+      if (y >= 0 && y <= h) return [0, y]
+    }
+    if (sin > 1e-9) {
+      const t = (h - cy) / sin
+      const x = cx + t * cos
+      if (x >= 0 && x <= w) return [x, h]
+    }
+    if (sin < -1e-9) {
+      const t = -cy / sin
+      const x = cx + t * cos
+      if (x >= 0 && x <= w) return [x, 0]
+    }
+    return [cx, cy]
   }
 
   labelPos(w: number, h: number): [number, number] {

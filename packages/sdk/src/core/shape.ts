@@ -16,7 +16,7 @@ export interface ShapeOpts {
 
 export abstract class Shape implements Node {
   readonly id: string
-  readonly label: string
+  label: string
   abstract readonly type: string
   x?: number
   y?: number
@@ -78,8 +78,10 @@ export function resolveSize(shape: Shape): [number, number] {
     return [shape.width, shape.height]
   }
   const fontSize = shape.fontSize ?? 16
-  const textW = shape.label.length * fontSize * 0.6
-  const textH = fontSize * 1.2
+  const lines = shape.label.split('\n')
+  const maxLineLen = Math.max(...lines.map(l => l.length))
+  const textW = maxLineLen * fontSize * 0.6
+  const textH = lines.length * fontSize * 1.4
   const [dw, dh] = shape.defaultSize
   return [
     shape.width ?? Math.max(dw, textW + 40),

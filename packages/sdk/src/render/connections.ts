@@ -65,13 +65,13 @@ export function clipToNode(
 }
 
 export function arrowheadPath(tip: Point, angle: number, size: number = 10): Float64Array {
-  const a1 = angle + Math.PI * 0.85
-  const a2 = angle - Math.PI * 0.85
+  const spread = 0.45 // ~26 degrees from the line
+  const a1 = angle + Math.PI - spread
+  const a2 = angle + Math.PI + spread
   return new PathBuilder()
-    .moveTo(tip.x, tip.y)
-    .lineTo(tip.x + size * Math.cos(a1), tip.y + size * Math.sin(a1))
+    .moveTo(tip.x + size * Math.cos(a1), tip.y + size * Math.sin(a1))
+    .lineTo(tip.x, tip.y)
     .lineTo(tip.x + size * Math.cos(a2), tip.y + size * Math.sin(a2))
-    .close()
     .build()
 }
 
@@ -82,12 +82,13 @@ export function connectionEndpoints(
 ): { from: Point; to: Point; angle: number } {
   const fromCenter = nodeCenter(from)
   const toCenter = nodeCenter(to)
-  const angle = Math.atan2(
-    toCenter.y - fromCenter.y,
-    toCenter.x - fromCenter.x,
-  )
-  const fromPt = clipToNode(from, angle, offset)
-  const toPt = clipToNode(to, angle + Math.PI, offset)
+  const dx = toCenter.x - fromCenter.x
+  const dy = toCenter.y - fromCenter.y
+  const angle = Math.atan2(dy, dx)
+  // Bias clip angle toward vertical so edges prefer top/bottom exits
+  const clipAngle = Math.atan2(dy, dx * 0.3)
+  const fromPt = clipToNode(from, clipAngle, offset)
+  const toPt = clipToNode(to, clipAngle + Math.PI, offset)
   return { from: fromPt, to: toPt, angle }
 }
 

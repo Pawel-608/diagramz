@@ -18,6 +18,8 @@ export class Connection {
   readonly color?: string
   readonly strokeWidth?: number
   readonly strokeDash?: number[]
+  /** Set by layout — intermediate route points for multi-layer edges */
+  waypoints: { x: number; y: number }[] = []
 
   constructor(id: string, from: Node, target: Node, label?: string, opts?: ConnectionOpts) {
     this.id = id

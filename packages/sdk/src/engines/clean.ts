@@ -85,8 +85,8 @@ export class CleanEngine extends Engine {
     angle: number,
     canvas: Canvas,
   ): void {
-    const color = parseColor(conn.color ?? '#000000')
-    const sw = conn.strokeWidth ?? 2
+    const color = parseColor(conn.color ?? '#333333')
+    const sw = conn.strokeWidth ?? 1.5
 
     if (conn.strokeDash) {
       canvas.strokePathDashed(linePath, color, sw, conn.strokeDash[0] ?? 5)
@@ -97,7 +97,7 @@ export class CleanEngine extends Engine {
     // Arrowhead
     if (conn.type === 'arrow') {
       const arrow = arrowheadPath(to, angle, 10)
-      canvas.fillPath(arrow, color)
+      canvas.strokePath(arrow, color, 1.5)
     }
   }
 }

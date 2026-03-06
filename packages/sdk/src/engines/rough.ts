@@ -150,7 +150,7 @@ export class RoughEngine extends Engine {
 
     if (conn.type === 'arrow') {
       const arrow = arrowheadPath(to, angle, 10)
-      canvas.fillPath(arrow, color)
+      canvas.strokePath(arrow, color, sw)
     }
   }
 

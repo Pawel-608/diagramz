@@ -5,7 +5,7 @@ import { Shape, resolveSize } from '../core/shape.js'
 import { Group } from '../core/group.js'
 import { PathBuilder, translatePath } from '../core/path.js'
 import { parseColor } from '../core/color.js'
-import { connectionEndpoints, arrowheadPath, labelPosition } from './connections.js'
+import { connectionEndpoints, arrowheadPath, labelPosition, nodeCenter, clipToNode, type Point } from './connections.js'
 
 interface Bounds {
   minX: number
@@ -118,6 +118,121 @@ class ScaledCanvas implements Canvas {
 
 export interface RenderOpts {
   scale?: number
+  skipLayout?: boolean
+}
+
+export interface RenderResult {
+  canvas: Canvas
+  offsetX: number
+  offsetY: number
+  width: number
+  height: number
+}
+
+function renderInternal(
+  diagram: Diagram,
+  engine: Engine,
+  factory: CanvasFactory,
+  opts?: RenderOpts,
+): RenderResult {
+  const scale = opts?.scale ?? 2
+
+  if (!opts?.skipLayout) {
+    diagram.layout.apply(diagram)
+  }
+
+  const shapes = collectAllShapes(diagram.children)
+  const groups = collectAllGroups(diagram.children)
+
+  const bounds = computeBounds(shapes, groups)
+  const padding = 40
+  const width = Math.ceil(bounds.maxX - bounds.minX + padding * 2)
+  const height = Math.ceil(bounds.maxY - bounds.minY + padding * 2)
+
+  const rawCanvas = factory.create(Math.max(width * scale, 1), Math.max(height * scale, 1))
+  const canvas: Canvas = scale === 1 ? rawCanvas : new ScaledCanvas(rawCanvas, scale)
+
+  const offsetX = -bounds.minX + padding
+  const offsetY = -bounds.minY + padding
+
+  // Render groups (deepest first)
+  for (let i = groups.length - 1; i >= 0; i--) {
+    const g = groups[i]
+    const b = g.bounds()
+    if (!b) continue
+    engine.renderGroup(g, b, offsetX, offsetY, canvas)
+  }
+
+  // Render shapes
+  for (const shape of shapes) {
+    const [w, h] = resolveSize(shape)
+    engine.renderElement(shape, w, h, offsetX, offsetY, canvas)
+  }
+
+  // Render connections
+  const offset = { x: offsetX, y: offsetY }
+  for (const conn of diagram.connections) {
+    const waypoints = conn.waypoints ?? []
+    let fromPt: Point, toPt: Point, linePath: Float64Array, angle: number
+
+    if (waypoints.length > 0) {
+      const fromCenter = nodeCenter(conn.from)
+      const toCenter = nodeCenter(conn.target)
+
+      const fdx = waypoints[0].x - fromCenter.x
+      const fdy = waypoints[0].y - fromCenter.y
+      const fromAngle = Math.atan2(fdy, fdx * 0.3)
+      fromPt = clipToNode(conn.from, fromAngle, offset)
+
+      const lastWp = waypoints[waypoints.length - 1]
+      const tdx = lastWp.x - toCenter.x
+      const tdy = lastWp.y - toCenter.y
+      const toAngle = Math.atan2(tdy, tdx * 0.3)
+      toPt = clipToNode(conn.target, toAngle, offset)
+
+      const pb = new PathBuilder().moveTo(fromPt.x, fromPt.y)
+      for (const wp of waypoints) {
+        pb.lineTo(wp.x + offset.x, wp.y + offset.y)
+      }
+      pb.lineTo(toPt.x, toPt.y)
+      linePath = pb.build()
+
+      angle = Math.atan2(toPt.y - (lastWp.y + offset.y), toPt.x - (lastWp.x + offset.x))
+    } else {
+      const result = connectionEndpoints(conn.from, conn.target, offset)
+      fromPt = result.from
+      toPt = result.to
+      angle = result.angle
+      linePath = new PathBuilder()
+        .moveTo(fromPt.x, fromPt.y)
+        .lineTo(toPt.x, toPt.y)
+        .build()
+    }
+
+    engine.renderConnection(linePath, conn, fromPt, toPt, angle, canvas)
+
+    if (conn.label) {
+      let labelPt: Point
+      if (waypoints.length > 0) {
+        const midIdx = Math.floor(waypoints.length / 2)
+        labelPt = { x: waypoints[midIdx].x + offset.x, y: waypoints[midIdx].y + offset.y - 8 }
+      } else {
+        labelPt = labelPosition(fromPt, toPt)
+      }
+      const [tw] = canvas.measureText(conn.label, 12, engine.font)
+      const pad = 3
+      const bgRect = new PathBuilder()
+        .moveTo(labelPt.x - tw / 2 - pad, labelPt.y - 8 - pad)
+        .lineTo(labelPt.x + tw / 2 + pad, labelPt.y - 8 - pad)
+        .lineTo(labelPt.x + tw / 2 + pad, labelPt.y + 4 + pad)
+        .lineTo(labelPt.x - tw / 2 - pad, labelPt.y + 4 + pad)
+        .close().build()
+      canvas.fillPath(bgRect, 0xf8f8f8e0)
+      canvas.drawText(conn.label, labelPt.x, labelPt.y, 12, parseColor(conn.color ?? '#000000'), engine.font)
+    }
+  }
+
+  return { canvas: rawCanvas, offsetX, offsetY, width, height }
 }
 
 export function renderDiagram(
@@ -126,60 +241,14 @@ export function renderDiagram(
   factory: CanvasFactory,
   opts?: RenderOpts,
 ): Uint8Array {
-  const scale = opts?.scale ?? 2
+  return renderInternal(diagram, engine, factory, opts).canvas.toPng()
+}
 
-  // 1. Apply layout
-  diagram.layout.apply(diagram)
-
-  // 2. Collect elements
-  const shapes = collectAllShapes(diagram.children)
-  const groups = collectAllGroups(diagram.children)
-
-  // 3. Compute bounds
-  const bounds = computeBounds(shapes, groups)
-  const padding = 40
-  const width = Math.ceil(bounds.maxX - bounds.minX + padding * 2)
-  const height = Math.ceil(bounds.maxY - bounds.minY + padding * 2)
-
-  // 4. Create canvas at scaled resolution
-  const rawCanvas = factory.create(Math.max(width * scale, 1), Math.max(height * scale, 1))
-  const canvas: Canvas = scale === 1 ? rawCanvas : new ScaledCanvas(rawCanvas, scale)
-
-  // Offset so everything starts at (padding, padding)
-  const offsetX = -bounds.minX + padding
-  const offsetY = -bounds.minY + padding
-
-  // 5. Render groups (deepest first — reverse order)
-  for (let i = groups.length - 1; i >= 0; i--) {
-    const g = groups[i]
-    const b = g.bounds()
-    if (!b) continue
-    engine.renderGroup(g, b, offsetX, offsetY, canvas)
-  }
-
-  // 6. Render shapes
-  for (const shape of shapes) {
-    const [w, h] = resolveSize(shape)
-    engine.renderElement(shape, w, h, offsetX, offsetY, canvas)
-  }
-
-  // 7. Render connections
-  const offset = { x: offsetX, y: offsetY }
-  for (const conn of diagram.connections) {
-    const { from, to, angle } = connectionEndpoints(conn.from, conn.target, offset)
-    const linePath = new PathBuilder()
-      .moveTo(from.x, from.y)
-      .lineTo(to.x, to.y)
-      .build()
-
-    engine.renderConnection(linePath, conn, from, to, angle, canvas)
-
-    // Connection label
-    if (conn.label) {
-      const pos = labelPosition(from, to)
-      canvas.drawText(conn.label, pos.x, pos.y, 12, parseColor(conn.color ?? '#000000'), engine.font)
-    }
-  }
-
-  return canvas.toPng()
+export function renderDiagramToCanvas(
+  diagram: Diagram,
+  engine: Engine,
+  factory: CanvasFactory,
+  opts?: RenderOpts,
+): RenderResult {
+  return renderInternal(diagram, engine, factory, opts)
 }

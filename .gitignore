@@ -13,3 +13,4 @@ pkg/
 *.png
 Cargo.lock
 pnpm-lock.yaml
+*.tgz
