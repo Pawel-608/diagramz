@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Diagramz logo — blue background, white Z-path mark -->
+  <rect width="400" height="400" fill="#1d4ed8"/>
+  <rect x="120" y="120" width="44" height="44" rx="9" fill="white"/>
+  <rect x="236" y="236" width="44" height="44" rx="9" fill="white"/>
+  <path d="M 164,142 L 236,142 L 164,258 L 236,258"
+        stroke="white" stroke-width="14" fill="none"
+        stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+</svg>
