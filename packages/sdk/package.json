@@ -1,0 +1,20 @@
+{
+  "name": "diagramz",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./shapes/basic": "./dist/shapes/basic.js",
+    "./engines": "./dist/engines/index.js",
+    "./layout": "./dist/layout/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}

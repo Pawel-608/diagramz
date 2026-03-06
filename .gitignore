@@ -7,5 +7,9 @@ dist/
 *.db-shm
 *.db-wal
 target/
-apps/web/src/wasm/
+packages/sdk/src/wasm/
+packages/sdk/dist/
 pkg/
+*.png
+Cargo.lock
+pnpm-lock.yaml
