@@ -2,7 +2,7 @@ use fontdue::{Font, FontSettings};
 use tiny_skia::{Color, Pixmap};
 
 static SKETCHY_FONT_BYTES: &[u8] = include_bytes!("../assets/ArchitectsDaughter.ttf");
-static CLEAN_FONT_BYTES: &[u8] = include_bytes!("../assets/Nunito.ttf");
+static CLEAN_FONT_BYTES: &[u8] = include_bytes!("../assets/Nunito-Bold.ttf");
 
 fn with_font<R>(sketchy: bool, f: impl FnOnce(&Font) -> R) -> R {
     thread_local! {

@@ -14,6 +14,6 @@ pub mod canvas;
 pub use types::*;
 pub use defaults::*;
 pub use validation::*;
-pub use layout::auto_layout;
+pub use layout::{auto_layout, ensure_min_sizes};
 pub use render::{render_diagram, render_diagram_auto, RenderOptions, Camera};
 pub use svg::render_svg;

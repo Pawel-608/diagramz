@@ -18,7 +18,7 @@ pub struct DiagramRow {
 impl Db {
     pub fn open(path: &str) -> Self {
         let conn = Connection::open(path).expect("Failed to open database");
-        conn.execute_batch("PRAGMA journal_mode = WAL;").unwrap();
+        conn.execute_batch("PRAGMA journal_mode = WAL; PRAGMA synchronous = NORMAL;").unwrap();
         conn.execute_batch(
             "CREATE TABLE IF NOT EXISTS diagrams (
                 id         TEXT PRIMARY KEY,

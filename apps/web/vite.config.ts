@@ -6,9 +6,12 @@ export default defineConfig({
   plugins: [react(), wasm()],
   server: {
     port: 3000,
+    headers: {
+      "Cache-Control": "no-store",
+    },
     proxy: {
       "/api/v1/diagrams/": {
-        target: "http://localhost:3001",
+        target: "http://127.0.0.1:3001",
         changeOrigin: true,
         configure: (proxy) => {
           // Disable buffering so SSE events stream through
@@ -20,11 +23,11 @@ export default defineConfig({
         },
       },
       "/api": {
-        target: "http://localhost:3001",
+        target: "http://127.0.0.1:3001",
         changeOrigin: true,
       },
       "/health": {
-        target: "http://localhost:3001",
+        target: "http://127.0.0.1:3001",
         changeOrigin: true,
       },
     },

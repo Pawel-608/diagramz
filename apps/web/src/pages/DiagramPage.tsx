@@ -12,11 +12,16 @@ let wasmInitPromise: Promise<Awaited<WasmModule>> | null = null;
 function loadWasm(): Promise<Awaited<WasmModule>> {
   if (wasmModule) return Promise.resolve(wasmModule);
   if (!wasmInitPromise) {
-    wasmInitPromise = import("../wasm/diagramz_renderer").then(async (mod) => {
-      await mod.default();
-      wasmModule = mod;
-      return mod;
-    });
+    wasmInitPromise = import("../wasm/diagramz_renderer")
+      .then(async (mod) => {
+        await mod.default();
+        wasmModule = mod;
+        return mod;
+      })
+      .catch((err) => {
+        wasmInitPromise = null;
+        throw err;
+      });
   }
   return wasmInitPromise;
 }

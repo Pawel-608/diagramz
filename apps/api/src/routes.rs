@@ -11,7 +11,7 @@ use futures_util::stream::Stream;
 use serde_json::{json, Value};
 
 use diagramz_renderer::defaults::{DEFAULT_TTL_MS, MAX_TITLE_LENGTH};
-use diagramz_renderer::layout::auto_layout;
+use diagramz_renderer::layout::{auto_layout, ensure_min_sizes};
 use diagramz_renderer::render::{encode_png, render_diagram_auto, RenderOptions};
 use diagramz_renderer::svg::render_svg;
 use diagramz_renderer::types::{
@@ -85,6 +85,7 @@ pub async fn create_diagram(
     if needs_layout && !elements.is_empty() {
         elements = auto_layout(&elements, &connections, body.layout.as_ref());
     }
+    ensure_min_sizes(&mut elements);
 
     let data = json!({
         "elements": elements,
@@ -206,8 +207,14 @@ pub async fn update_diagram(
     }
 
     let existing_data: Value = serde_json::from_str(&row.data).unwrap_or(json!({}));
+    let mut elements: Vec<diagramz_renderer::types::DiagramElement> = body
+        .elements
+        .as_ref()
+        .map(|e| e.clone())
+        .unwrap_or_else(|| serde_json::from_value(existing_data["elements"].clone()).unwrap_or_default());
+    ensure_min_sizes(&mut elements);
     let new_data = json!({
-        "elements": body.elements.as_ref().map(|e| json!(e)).unwrap_or(existing_data["elements"].clone()),
+        "elements": elements,
         "connections": body.connections.as_ref().map(|c| json!(c)).unwrap_or(existing_data["connections"].clone()),
         "viewport": existing_data["viewport"].clone(),
     });

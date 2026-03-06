@@ -65,6 +65,54 @@ fn parse_hex_color(hex: &str) -> Color {
     Color::from_rgba8(r, g, b, 255)
 }
 
+fn compute_min_element_size(el: &crate::types::DiagramElement, sketchy: bool) -> (f32, f32) {
+    let font_size = el
+        .style
+        .as_ref()
+        .and_then(|s| s.font_size)
+        .unwrap_or(16.0);
+    let padding = 40.0_f32;
+
+    let label_w = el
+        .label
+        .as_ref()
+        .map(|l| {
+            let (tw, _) = text::measure_text(l, font_size, sketchy);
+            tw + padding
+        })
+        .unwrap_or(0.0);
+
+    let body_font_size = font_size - 2.0;
+    let body_padding = 32.0_f32;
+    let body_w = el
+        .body
+        .as_ref()
+        .map(|items| {
+            items
+                .iter()
+                .map(|s| {
+                    let (tw, _) = text::measure_text(s, body_font_size, sketchy);
+                    tw + body_padding
+                })
+                .fold(0.0_f32, f32::max)
+        })
+        .unwrap_or(0.0);
+
+    let min_w = 120.0_f32.max(label_w).max(body_w);
+
+    let has_body = el.body.as_ref().map_or(false, |b| !b.is_empty());
+    let min_h = if has_body {
+        let header_h = font_size * 2.5;
+        let line_h = body_font_size * 1.5;
+        let body_h = el.body.as_ref().unwrap().len() as f32 * line_h + font_size;
+        header_h + body_h
+    } else {
+        font_size * 3.5
+    };
+
+    (min_w, min_h)
+}
+
 fn make_paint(color: Color, opacity: f32) -> Paint<'static> {
     let mut paint = Paint::default();
     paint.set_color(
@@ -248,8 +296,10 @@ pub fn render_diagram(
 
         let ex = (el.x.unwrap_or(0.0) as f32 - cam_x) * zoom;
         let ey = (el.y.unwrap_or(0.0) as f32 - cam_y) * zoom;
-        let ew = el.width.unwrap_or(120.0) as f32 * zoom;
-        let eh = el.height.unwrap_or(60.0) as f32 * zoom;
+        // Auto-size: compute minimum dimensions from text content
+        let (min_w, min_h) = compute_min_element_size(el, options.sketchy);
+        let ew = (el.width.unwrap_or(120.0) as f32).max(min_w) * zoom;
+        let eh = (el.height.unwrap_or(60.0) as f32).max(min_h) * zoom;
 
         match el.element_type {
             ElementType::Rectangle => {
@@ -461,8 +511,9 @@ pub fn render_diagram_auto(diagram: &Diagram, options: &RenderOptions) -> (Vec<u
     for el in &diagram.elements {
         let x = el.x.unwrap_or(0.0);
         let y = el.y.unwrap_or(0.0);
-        let w = el.width.unwrap_or(120.0);
-        let h = el.height.unwrap_or(60.0);
+        let (min_w, min_h) = compute_min_element_size(el, options.sketchy);
+        let w = (el.width.unwrap_or(120.0) as f32).max(min_w) as f64;
+        let h = (el.height.unwrap_or(60.0) as f32).max(min_h) as f64;
         min_x = min_x.min(x);
         min_y = min_y.min(y);
         max_x = max_x.max(x + w);
