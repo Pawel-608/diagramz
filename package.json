@@ -1,13 +1,6 @@
 {
   "name": "diagramz",
   "private": true,
-  "scripts": {
-    "dev:web": "pnpm --filter @diagramz/web dev",
-    "build:web": "pnpm --filter @diagramz/web build",
-    "build:wasm": "wasm-pack build packages/renderer --target web --out-dir ../../apps/web/src/wasm"
-  },
-  "devDependencies": {
-    "typescript": "^5.7.0"
-  },
+  "scripts": {},
   "packageManager": "pnpm@9.15.0"
 }

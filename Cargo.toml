@@ -1,6 +1,3 @@
 [workspace]
 resolver = "2"
-members = [
-    "packages/renderer",
-    "apps/api",
-]
+members = []
