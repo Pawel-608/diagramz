@@ -2,14 +2,11 @@
   "name": "diagramz",
   "private": true,
   "scripts": {
-    "dev": "turbo dev",
-    "build": "turbo build",
-    "lint": "turbo lint",
-    "typecheck": "turbo typecheck",
-    "clean": "turbo clean"
+    "dev:web": "pnpm --filter @diagramz/web dev",
+    "build:web": "pnpm --filter @diagramz/web build",
+    "build:wasm": "wasm-pack build packages/renderer --target web --out-dir ../../apps/web/src/wasm"
   },
   "devDependencies": {
-    "turbo": "^2.4.0",
     "typescript": "^5.7.0"
   },
   "packageManager": "pnpm@9.15.0"
