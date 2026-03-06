@@ -4,7 +4,7 @@ import type { Shape } from '../core/shape.js'
 import type { Group } from '../core/group.js'
 import type { Connection } from '../core/connection.js'
 import type { Point } from '../render/connections.js'
-import { renderDiagram } from '../render/loop.js'
+import { renderDiagram, type RenderOpts } from '../render/loop.js'
 
 export abstract class Engine {
   abstract readonly name: string
@@ -36,8 +36,8 @@ export abstract class Engine {
     canvas: Canvas,
   ): void
 
-  render(diagram: Diagram, factory: CanvasFactory): Uint8Array {
-    return renderDiagram(diagram, this, factory)
+  render(diagram: Diagram, factory: CanvasFactory, opts?: RenderOpts): Uint8Array {
+    return renderDiagram(diagram, this, factory, opts)
   }
 
   toJSON(): unknown {

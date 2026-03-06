@@ -3,7 +3,7 @@ import type { Canvas, CanvasFactory } from '../engines/canvas.js'
 import type { Engine } from '../engines/engine.js'
 import { Shape, resolveSize } from '../core/shape.js'
 import { Group } from '../core/group.js'
-import { PathBuilder } from '../core/path.js'
+import { PathBuilder, translatePath } from '../core/path.js'
 import { parseColor } from '../core/color.js'
 import { connectionEndpoints, arrowheadPath, labelPosition } from './connections.js'
 
@@ -64,11 +64,70 @@ function computeBounds(shapes: Shape[], groups: Group[]): Bounds {
   return { minX, minY, maxX, maxY }
 }
 
+function scalePath(segs: Float64Array, s: number): Float64Array {
+  if (s === 1) return segs
+  const out = new Float64Array(segs.length)
+  let i = 0
+  while (i < segs.length) {
+    const cmd = segs[i]
+    out[i] = cmd
+    if (cmd === 0 || cmd === 1) { // MoveTo / LineTo
+      out[i + 1] = segs[i + 1] * s
+      out[i + 2] = segs[i + 2] * s
+      i += 3
+    } else if (cmd === 2) { // CubicTo
+      out[i + 1] = segs[i + 1] * s
+      out[i + 2] = segs[i + 2] * s
+      out[i + 3] = segs[i + 3] * s
+      out[i + 4] = segs[i + 4] * s
+      out[i + 5] = segs[i + 5] * s
+      out[i + 6] = segs[i + 6] * s
+      i += 7
+    } else { // Close
+      i += 1
+    }
+  }
+  return out
+}
+
+class ScaledCanvas implements Canvas {
+  constructor(private inner: Canvas, private s: number) {}
+
+  fillPath(segs: Float64Array, color: number): void {
+    this.inner.fillPath(scalePath(segs, this.s), color)
+  }
+  strokePath(segs: Float64Array, color: number, width: number): void {
+    this.inner.strokePath(scalePath(segs, this.s), color, width * this.s)
+  }
+  strokePathDashed(segs: Float64Array, color: number, width: number, dash: number): void {
+    this.inner.strokePathDashed(scalePath(segs, this.s), color, width * this.s, dash * this.s)
+  }
+  drawText(text: string, x: number, y: number, size: number, color: number, font: number): void {
+    this.inner.drawText(text, x * this.s, y * this.s, size * this.s, color, font)
+  }
+  measureText(text: string, size: number, font: number): [number, number] {
+    return this.inner.measureText(text, size, font)
+  }
+  toPng(): Uint8Array {
+    return this.inner.toPng()
+  }
+  toImageData(): Uint8Array {
+    return this.inner.toImageData()
+  }
+}
+
+export interface RenderOpts {
+  scale?: number
+}
+
 export function renderDiagram(
   diagram: Diagram,
   engine: Engine,
   factory: CanvasFactory,
+  opts?: RenderOpts,
 ): Uint8Array {
+  const scale = opts?.scale ?? 2
+
   // 1. Apply layout
   diagram.layout.apply(diagram)
 
@@ -82,8 +141,9 @@ export function renderDiagram(
   const width = Math.ceil(bounds.maxX - bounds.minX + padding * 2)
   const height = Math.ceil(bounds.maxY - bounds.minY + padding * 2)
 
-  // 4. Create canvas
-  const canvas = factory.create(Math.max(width, 1), Math.max(height, 1))
+  // 4. Create canvas at scaled resolution
+  const rawCanvas = factory.create(Math.max(width * scale, 1), Math.max(height * scale, 1))
+  const canvas: Canvas = scale === 1 ? rawCanvas : new ScaledCanvas(rawCanvas, scale)
 
   // Offset so everything starts at (padding, padding)
   const offsetX = -bounds.minX + padding

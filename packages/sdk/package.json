@@ -1,6 +1,7 @@
 {
   "name": "diagramz",
-  "version": "0.1.0",
+  "version": "0.1.3",
+  "description": "Diagrams as code — build, render, and share diagrams from JavaScript",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,13 +9,35 @@
     ".": "./dist/index.js",
     "./shapes/basic": "./dist/shapes/basic.js",
     "./engines": "./dist/engines/index.js",
-    "./layout": "./dist/layout/index.js"
+    "./layout": "./dist/layout/index.js",
+    "./wasm-canvas": "./dist/wasm-canvas.js"
   },
+  "bin": {
+    "diagramz": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
-    "dev": "tsc --watch"
+    "dev": "tsc --watch",
+    "prepublishOnly": "tsc && mkdir -p dist/wasm && cp src/wasm/diagramz_renderer.cjs src/wasm/diagramz_renderer_bg.wasm dist/wasm/"
+  },
+  "keywords": [
+    "diagram",
+    "wasm",
+    "rendering",
+    "cli",
+    "canvas"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pawel-608/diagramz.git",
+    "directory": "packages/sdk"
   },
   "devDependencies": {
+    "@types/node": "^22.0.0",
     "typescript": "^5.7.0"
   }
 }

@@ -1,6 +1,7 @@
 {
   "name": "diagramz",
   "private": true,
+  "type": "module",
   "scripts": {},
   "packageManager": "pnpm@9.15.0"
 }
