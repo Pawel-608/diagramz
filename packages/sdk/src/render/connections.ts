@@ -84,11 +84,12 @@ export function connectionEndpoints(
   const toCenter = nodeCenter(to)
   const dx = toCenter.x - fromCenter.x
   const dy = toCenter.y - fromCenter.y
-  const angle = Math.atan2(dy, dx)
   // Bias clip angle toward vertical so edges prefer top/bottom exits
   const clipAngle = Math.atan2(dy, dx * 0.3)
   const fromPt = clipToNode(from, clipAngle, offset)
   const toPt = clipToNode(to, clipAngle + Math.PI, offset)
+  // Use the actual line angle for arrowhead direction
+  const angle = Math.atan2(toPt.y - fromPt.y, toPt.x - fromPt.x)
   return { from: fromPt, to: toPt, angle }
 }
 

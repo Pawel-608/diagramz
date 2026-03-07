@@ -115,30 +115,34 @@ class TextShape extends Shape {
   }
 
   clipPoint(w: number, h: number, angle: number): [number, number] {
-    const cx = w / 2, cy = h / 2
+    // Clip against a larger virtual box so arrows stop well outside the text
+    const pad = 14
+    const pw = w + pad * 2, ph = h + pad * 2
+    const cx = pw / 2, cy = ph / 2
     const cos = Math.cos(angle), sin = Math.sin(angle)
 
+    let rx = cx, ry = cy
     if (cos > 1e-9) {
-      const t = (w - cx) / cos
+      const t = (pw - cx) / cos
       const y = cy + t * sin
-      if (y >= 0 && y <= h) return [w, y]
+      if (y >= 0 && y <= ph) { rx = pw; ry = y }
     }
     if (cos < -1e-9) {
       const t = -cx / cos
       const y = cy + t * sin
-      if (y >= 0 && y <= h) return [0, y]
+      if (y >= 0 && y <= ph) { rx = 0; ry = y }
     }
-    if (sin > 1e-9) {
-      const t = (h - cy) / sin
+    if (sin > 1e-9 && rx === cx) {
+      const t = (ph - cy) / sin
       const x = cx + t * cos
-      if (x >= 0 && x <= w) return [x, h]
+      if (x >= 0 && x <= pw) { rx = x; ry = ph }
     }
-    if (sin < -1e-9) {
+    if (sin < -1e-9 && rx === cx) {
       const t = -cy / sin
       const x = cx + t * cos
-      if (x >= 0 && x <= w) return [x, 0]
+      if (x >= 0 && x <= pw) { rx = x; ry = 0 }
     }
-    return [cx, cy]
+    return [rx - pad, ry - pad]
   }
 
   labelPos(w: number, h: number): [number, number] {

@@ -74,17 +74,16 @@ export abstract class Shape implements Node {
 }
 
 export function resolveSize(shape: Shape): [number, number] {
-  if (shape.width != null && shape.height != null) {
-    return [shape.width, shape.height]
-  }
   const fontSize = shape.fontSize ?? 16
   const lines = shape.label.split('\n')
-  const maxLineLen = Math.max(...lines.map(l => l.length))
-  const textW = maxLineLen * fontSize * 0.6
+  const maxLineLen = Math.max(0, ...lines.map(l => l.length))
+  const textW = maxLineLen * fontSize * 0.65
   const textH = lines.length * fontSize * 1.4
   const [dw, dh] = shape.defaultSize
+  const minW = Math.max(dw, textW + 40)
+  const minH = Math.max(dh, textH + 20)
   return [
-    shape.width ?? Math.max(dw, textW + 40),
-    shape.height ?? Math.max(dh, textH + 20),
+    Math.max(shape.width ?? minW, minW),
+    Math.max(shape.height ?? minH, minH),
   ]
 }
