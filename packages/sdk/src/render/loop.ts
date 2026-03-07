@@ -1,6 +1,7 @@
 import type { Diagram } from '../core/diagram.js'
 import type { Canvas, CanvasFactory } from '../engines/canvas.js'
 import type { Engine } from '../engines/engine.js'
+import { SvgCanvas, svgCanvasFactory } from '../engines/svg-canvas.js'
 import { Shape, resolveSize } from '../core/shape.js'
 import { Group } from '../core/group.js'
 import { PathBuilder, translatePath } from '../core/path.js'
@@ -251,4 +252,13 @@ export function renderDiagramToCanvas(
   opts?: RenderOpts,
 ): RenderResult {
   return renderInternal(diagram, engine, factory, opts)
+}
+
+export function renderToSvg(
+  diagram: Diagram,
+  engine: Engine,
+  opts?: Omit<RenderOpts, 'scale'>,
+): string {
+  const result = renderInternal(diagram, engine, svgCanvasFactory, { ...opts, scale: 1 })
+  return (result.canvas as SvgCanvas).toSvg()
 }

@@ -1,6 +1,6 @@
 {
   "name": "diagramz",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Diagrams as code — build, render, and share diagrams from JavaScript",
   "type": "module",
   "main": "dist/index.js",
@@ -19,9 +19,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
-    "prepublishOnly": "tsc && mkdir -p dist/wasm && cp src/wasm/diagramz_renderer.cjs src/wasm/diagramz_renderer_bg.wasm dist/wasm/"
+    "build": "tsc && mkdir -p dist/wasm && cp src/wasm/diagramz_renderer.cjs src/wasm/diagramz_renderer_bg.wasm dist/wasm/",
+    "dev": "tsc --watch"
   },
   "keywords": [
     "diagram",

@@ -99,19 +99,18 @@ export class RoughEngine extends Engine {
     const x = bounds.x + offsetX
     const y = bounds.y + offsetY
     const rng = new SeededRng(this.seed + hashStr(group.id))
-
-    const fill = parseColor(group.fillColor ?? '#f5f5f5')
     const stroke = parseColor(group.color ?? '#cccccc')
 
-    // Fill background
-    const rect = new PathBuilder()
-      .moveTo(x, y)
-      .lineTo(x + bounds.w, y)
-      .lineTo(x + bounds.w, y + bounds.h)
-      .lineTo(x, y + bounds.h)
-      .close()
-      .build()
-    canvas.fillPath(rect, fill)
+    if (group.fillColor) {
+      const rect = new PathBuilder()
+        .moveTo(x, y)
+        .lineTo(x + bounds.w, y)
+        .lineTo(x + bounds.w, y + bounds.h)
+        .lineTo(x, y + bounds.h)
+        .close()
+        .build()
+      canvas.fillPath(rect, parseColor(group.fillColor))
+    }
 
     // Wobbled border
     const outline = new PathBuilder()

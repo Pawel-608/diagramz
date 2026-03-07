@@ -56,9 +56,6 @@ export class CleanEngine extends Engine {
   ): void {
     const x = bounds.x + offsetX
     const y = bounds.y + offsetY
-
-    // Background
-    const fill = parseColor(group.fillColor ?? '#f5f5f5')
     const stroke = parseColor(group.color ?? '#cccccc')
     const sw = group.strokeWidth ?? 1
 
@@ -70,7 +67,9 @@ export class CleanEngine extends Engine {
       .close()
       .build()
 
-    canvas.fillPath(rect, fill)
+    if (group.fillColor) {
+      canvas.fillPath(rect, parseColor(group.fillColor))
+    }
     canvas.strokePath(rect, stroke, sw)
 
     // Group label at top
