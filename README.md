@@ -1,12 +1,12 @@
 # diagramz
 
-Pastebin for diagrams. AI agents create diagrams via code or REST API, humans get instant shareable links to view and edit in a canvas UI.
+Pastebin for diagrams — designed to be written by AI coding agents like [Claude Code](https://docs.anthropic.com/en/docs/claude-code), [Codex](https://openai.com/index/codex/), and other LLM-powered tools. Agents create diagrams via code or REST API, humans get instant shareable links to view and edit in a canvas UI.
 
-**[diagramz.xyz](https://diagramz.xyz)**
+**[diagramz.xyz](https://diagramz.xyz)** | [LLM reference](https://diagramz.xyz/llms.txt)
 
 ## How it works
 
-1. Write a diagram in JavaScript
+1. An AI agent writes a diagram in JavaScript (or calls the REST API directly)
 2. Render locally (PNG/SVG) or publish to diagramz.xyz for a shareable link
 3. Edit interactively in the browser canvas
 

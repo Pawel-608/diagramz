@@ -1,6 +1,8 @@
 # diagramz
 
-Diagrams as code — build, render, and share diagrams from JavaScript.
+Diagrams as code — designed to be written by AI coding agents like [Claude Code](https://docs.anthropic.com/en/docs/claude-code), [Codex](https://openai.com/index/codex/), and other LLM-powered tools. Build, render, and share diagrams from JavaScript.
+
+**[diagramz.xyz](https://diagramz.xyz)** | [LLM reference](https://diagramz.xyz/llms.txt)
 
 ```
 npm install diagramz
