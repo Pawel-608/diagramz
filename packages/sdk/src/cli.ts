@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { writeFileSync } from 'node:fs'
+import { readFileSync, writeFileSync } from 'node:fs'
 import { resolve, basename } from 'node:path'
 import { pathToFileURL, fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
@@ -130,29 +130,69 @@ if (!d || !(d instanceof Diagram)) {
 }
 
 if (command === 'publish') {
+  // Read existing publish ID from source file comment or diagram object
+  const source = readFileSync(fullPath, 'utf-8')
+  const idMatch = source.match(/^\/\/\s*@diagramz-id\s+(\S+)/m)
+  const existingId = d.id ?? idMatch?.[1]
+
   const json = d.toJSON()
-  const res = await fetch(`${apiUrl}/api/v1/diagrams`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ data: json }),
-  })
-  if (!res.ok) {
-    const err = await res.text()
-    console.error(`Error: Failed to publish (${res.status})`)
-    console.error(err)
-    process.exit(1)
+  let id: string
+  let url: string
+
+  if (existingId) {
+    // Update existing diagram via PATCH
+    const res = await fetch(`${apiUrl}/api/v1/diagrams/${existingId}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ data: json }),
+    })
+    if (!res.ok) {
+      const err = await res.text()
+      console.error(`Error: Failed to update diagram (${res.status})`)
+      console.error(err)
+      process.exit(1)
+    }
+    id = existingId
+    url = `/api/v1/diagrams/${id}`
+    console.log(`Updated: ${apiUrl}/d/${id}`)
+  } else {
+    // Create new diagram via POST
+    const res = await fetch(`${apiUrl}/api/v1/diagrams`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ data: json }),
+    })
+    if (!res.ok) {
+      const err = await res.text()
+      console.error(`Error: Failed to publish (${res.status})`)
+      console.error(err)
+      process.exit(1)
+    }
+    const body = await res.json() as { id: string; url: string }
+    id = body.id
+    url = body.url
+    console.log(`Published: ${apiUrl}${url}`)
   }
-  const { id, url } = await res.json() as { id: string; url: string }
-  console.log(`Published: ${apiUrl}${url}`)
+
+  // Write @diagramz-id back to source file
+  let updatedSource: string
+  if (idMatch) {
+    updatedSource = source.replace(/^\/\/\s*@diagramz-id\s+\S+/m, `// @diagramz-id ${id}`)
+  } else {
+    updatedSource = `// @diagramz-id ${id}\n${source}`
+  }
+  writeFileSync(fullPath, updatedSource)
+
   console.log(`  View:    ${apiUrl}/d/${id}`)
   console.log(`  PNG:     ${apiUrl}/d/${id}/png`)
   console.log(`  SVG:     ${apiUrl}/d/${id}/svg`)
+  console.log(`  ID saved to ${inputFile}`)
 } else {
   const fmt = resolveFormat()
   if (!outputFile) outputFile = defaultOutput(fmt)
 
   const engine = engineName === 'clean' ? new CleanEngine() : new RoughEngine()
-  const wrapCanvas = (t: import('./engines/canvas.js').Canvas) => engine.createCanvas(t)
+  const wrapCanvas = (t: import('./engines/canvas.js').RenderTarget) => engine.createCanvas(t)
 
   if (fmt === 'svg') {
     const svg = renderToSvg(d, wrapCanvas)

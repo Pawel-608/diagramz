@@ -51,8 +51,10 @@ export abstract class Shape implements Node {
   abstract labelPos(w: number, h: number): [number, number]
   abstract get defaultSize(): [number, number]
 
-  to(target: Node, label?: string, opts?: ConnectionOpts): Connection {
-    const conn = new Connection(generateId('c'), this, target, label, opts)
+  to(target: Node, labelOrOpts?: string | ConnectionOpts, opts?: ConnectionOpts): Connection {
+    const label = typeof labelOrOpts === 'string' ? labelOrOpts : undefined
+    const options = typeof labelOrOpts === 'object' ? labelOrOpts : opts
+    const conn = new Connection(generateId('c'), this, target, label, options)
     const register = this._register ?? (target as Shape)._register
     register?.(conn)
     return conn

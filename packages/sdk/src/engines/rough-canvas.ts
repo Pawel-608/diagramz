@@ -1,4 +1,4 @@
-import type { Canvas } from './canvas.js'
+import type { Canvas, RenderTarget } from './canvas.js'
 import { DefaultPathBuilder, MOVE_TO, LINE_TO, CUBIC_TO, CLOSE } from '../core/path.js'
 import { colorWithAlpha } from '../core/color.js'
 
@@ -29,7 +29,7 @@ export class RoughCanvas implements Canvas {
   private readonly roughness: number
   private readonly rng: SeededRng
 
-  constructor(private target: Canvas, opts?: RoughCanvasOpts) {
+  constructor(private target: RenderTarget, opts?: RoughCanvasOpts) {
     this.roughness = opts?.roughness ?? 1.5
     this.rng = new SeededRng(opts?.seed ?? 1)
   }

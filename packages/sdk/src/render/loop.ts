@@ -128,7 +128,7 @@ export interface RenderResult {
   height: number
 }
 
-export type CanvasWrapper = (target: Canvas) => Canvas
+export type CanvasWrapper = (target: RenderTarget) => Canvas
 
 function renderInternal(
   diagram: Diagram,

@@ -11,6 +11,7 @@ import { ClassShape, type ClassShapeOpts } from '../shapes/uml.js'
 import { C4PersonShape, C4BoxShape, type C4ShapeOpts } from '../shapes/c4.js'
 
 export interface DiagramOpts {
+  id?: string
   layout?: Layout
   colors?: string[]
   background?: string
@@ -18,6 +19,7 @@ export interface DiagramOpts {
 }
 
 export class Diagram {
+  id?: string
   readonly title?: string
   readonly children: (Shape | Group)[] = []
   readonly connections: Connection[] = []
@@ -27,6 +29,7 @@ export class Diagram {
   readonly description?: string
 
   constructor(title?: string, opts?: DiagramOpts) {
+    this.id = opts?.id
     this.title = title
     this.layout = opts?.layout ?? new Sugiyama()
     this.colors = opts?.colors
@@ -66,6 +69,7 @@ export class Diagram {
       children: this.children.map(c => c.toJSON()),
       connections: this.connections.map(c => c.toJSON()),
     }
+    if (this.id) json.id = this.id
     if (this.colors) json.colors = this.colors
     if (this.background) json.background = this.background
     if (this.description) json.description = this.description
@@ -127,6 +131,7 @@ interface JsonConnection {
 }
 
 interface JsonDiagram {
+  id?: string
   title?: string
   colors?: string[]
   background?: string
@@ -148,7 +153,7 @@ export function diagramFromJson(json: string): Diagram {
     })
   }
 
-  const d = new Diagram(data.title, { layout, colors: data.colors, background: data.background, description: data.description })
+  const d = new Diagram(data.title, { id: data.id, layout, colors: data.colors, background: data.background, description: data.description })
   const nodeMap = new Map<string, Node>()
 
   function addChildren(parent: Diagram | Group, children: (JsonShape | JsonGroup)[]) {

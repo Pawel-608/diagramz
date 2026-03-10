@@ -1,9 +1,9 @@
-import type { Canvas } from './canvas.js'
+import type { Canvas, RenderTarget } from './canvas.js'
 
 export class CleanCanvas implements Canvas {
   readonly font = 1
 
-  constructor(private target: Canvas) {}
+  constructor(private target: RenderTarget) {}
 
   fillPath(segs: Float64Array, color: number): void {
     this.target.fillPath(segs, color)

@@ -1,4 +1,4 @@
-import { diagram, palettes } from 'diagramz'
+import { diagram, palettes, inherit, implement, compose, aggregate, depend } from 'diagramz'
 import { classShape } from 'diagramz/shapes/uml'
 import { Sugiyama } from 'diagramz/layout'
 
@@ -167,47 +167,47 @@ const pathBuilder = connsGroup.add(classShape('PathBuilder', {
 // ── Relationships ──
 
 // Node hierarchy
-shape.to(node, '', { type: 'implement' })
-group.to(node, '', { type: 'implement' })
+shape.to(node, implement())
+group.to(node, implement())
 
 // Diagram composition
-diag.to(node, '', { type: 'compose' })
-diag.to(connection, '', { type: 'compose' })
-diag.to(layout, '', { type: 'aggregate' })
-diag.to(theme, '', { type: 'depend' })
+diag.to(node, compose())
+diag.to(connection, compose())
+diag.to(layout, aggregate())
+diag.to(theme, depend())
 
 // Shape subtypes
-rectShape.to(shape, '', { type: 'inherit' })
-ellipseShape.to(shape, '', { type: 'inherit' })
-diamondShape.to(shape, '', { type: 'inherit' })
-textShape.to(shape, '', { type: 'inherit' })
-classBox.to(shape, '', { type: 'inherit' })
-c4Person.to(shape, '', { type: 'inherit' })
-c4Box.to(shape, '', { type: 'inherit' })
+rectShape.to(shape, inherit())
+ellipseShape.to(shape, inherit())
+diamondShape.to(shape, inherit())
+textShape.to(shape, inherit())
+classBox.to(shape, inherit())
+c4Person.to(shape, inherit())
+c4Box.to(shape, inherit())
 
 // Layout
-sugiyama.to(layout, '', { type: 'implement' })
+sugiyama.to(layout, implement())
 
 // RenderTarget extends Canvas
-renderTarget.to(canvas, '', { type: 'inherit' })
+renderTarget.to(canvas, inherit())
 
 // Canvas implementations
-cleanCanvas.to(canvas, '', { type: 'implement' })
-roughCanvas.to(canvas, '', { type: 'implement' })
+cleanCanvas.to(canvas, implement())
+roughCanvas.to(canvas, implement())
 
 // RenderTarget implementations
-svgTarget.to(renderTarget, '', { type: 'implement' })
-wasmTarget.to(renderTarget, '', { type: 'implement' })
+svgTarget.to(renderTarget, implement())
+wasmTarget.to(renderTarget, implement())
 
-// Canvas decorators wrap a Canvas (which is a RenderTarget)
-cleanCanvas.to(canvas, 'wraps', { type: 'aggregate' })
-roughCanvas.to(canvas, 'wraps', { type: 'aggregate' })
+// Canvas decorators wrap a RenderTarget
+cleanCanvas.to(renderTarget, 'wraps', aggregate())
+roughCanvas.to(renderTarget, 'wraps', aggregate())
 
 // Shapes/groups/connections render themselves on Canvas
-shape.to(canvas, '', { type: 'depend' })
-group.to(canvas, '', { type: 'depend' })
-connection.to(canvas, '', { type: 'depend' })
-shape.to(pathBuilder, '', { type: 'depend' })
-connection.to(pathBuilder, '', { type: 'depend' })
+shape.to(canvas, depend())
+group.to(canvas, depend())
+connection.to(canvas, depend())
+shape.to(pathBuilder, depend())
+connection.to(pathBuilder, depend())
 
 export default d

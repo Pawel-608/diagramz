@@ -106,3 +106,17 @@ export class Connection {
     return json
   }
 }
+
+// ---------------------------------------------------------------------------
+// Connection type presets — pass to .to() as opts
+// ---------------------------------------------------------------------------
+
+type StyleOpts = Omit<ConnectionOpts, 'type'>
+
+export function arrow(opts?: StyleOpts): ConnectionOpts { return { ...opts, type: 'arrow' } }
+export function line(opts?: StyleOpts): ConnectionOpts { return { ...opts, type: 'line' } }
+export function inherit(opts?: StyleOpts): ConnectionOpts { return { ...opts, type: 'inherit' } }
+export function implement(opts?: StyleOpts): ConnectionOpts { return { ...opts, type: 'implement' } }
+export function compose(opts?: StyleOpts): ConnectionOpts { return { ...opts, type: 'compose' } }
+export function aggregate(opts?: StyleOpts): ConnectionOpts { return { ...opts, type: 'aggregate' } }
+export function depend(opts?: StyleOpts): ConnectionOpts { return { ...opts, type: 'depend' } }

@@ -1,5 +1,5 @@
 import { Engine } from './engine.js'
-import type { Canvas } from './canvas.js'
+import type { Canvas, RenderTarget } from './canvas.js'
 import { RoughCanvas } from './rough-canvas.js'
 
 export interface RoughOpts {
@@ -18,7 +18,7 @@ export class RoughEngine extends Engine {
     this.seed = opts?.seed ?? 1
   }
 
-  createCanvas(target: Canvas): Canvas {
+  createCanvas(target: RenderTarget): Canvas {
     return new RoughCanvas(target, { roughness: this.roughness, seed: this.seed })
   }
 
