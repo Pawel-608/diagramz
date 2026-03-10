@@ -19,7 +19,8 @@
     "diagramz": "./dist/cli.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "scripts": {
     "build": "tsc && mkdir -p dist/wasm && cp src/wasm/diagramz_renderer.cjs src/wasm/diagramz_renderer_bg.wasm dist/wasm/",
