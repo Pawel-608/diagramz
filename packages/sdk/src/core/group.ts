@@ -1,7 +1,10 @@
 import type { Node, ConnectionRegistrar } from './node.js'
+import type { Canvas } from '../engines/canvas.js'
 import { Connection, type ConnectionOpts } from './connection.js'
 import { Shape, resolveSize } from './shape.js'
 import { generateId } from './id.js'
+import { DefaultPathBuilder } from './path.js'
+import { parseColor } from './color.js'
 
 export interface GroupOpts {
   id?: string
@@ -72,6 +75,29 @@ export class Group implements Node {
     if (!isFinite(minX)) return null
     const pad = 20
     return { x: minX - pad, y: minY - pad, w: maxX - minX + pad * 2, h: maxY - minY + pad * 2 }
+  }
+
+  render(canvas: Canvas, offsetX: number, offsetY: number): void {
+    const b = this.bounds()
+    if (!b) return
+    const x = b.x + offsetX
+    const y = b.y + offsetY
+    const stroke = parseColor(this.color ?? '#cccccc')
+    const sw = this.strokeWidth ?? 1
+
+    const rect = new DefaultPathBuilder()
+      .moveTo(x, y)
+      .lineTo(x + b.w, y)
+      .lineTo(x + b.w, y + b.h)
+      .lineTo(x, y + b.h)
+      .close()
+      .build()
+
+    if (this.fillColor) {
+      canvas.fillPath(rect, parseColor(this.fillColor))
+    }
+    canvas.strokePath(rect, stroke, sw)
+    canvas.drawText(this.label, x + 8, y + 16, 12, parseColor(this.color ?? '#666666'), 0)
   }
 
   toJSON(): unknown {

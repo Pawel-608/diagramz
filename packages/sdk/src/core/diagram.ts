@@ -1,15 +1,20 @@
 import type { Node } from './node.js'
-import { Connection, type ConnectionOpts, type ConnectionType } from './connection.js'
+import { Connection, type ConnectionType } from './connection.js'
 import { Shape, type ShapeOpts } from './shape.js'
 import { Group, type GroupOpts } from './group.js'
 import type { Layout } from '../layout/layout.js'
 import type { Engine } from '../engines/engine.js'
-import type { CanvasFactory } from '../engines/canvas.js'
+import type { RenderTargetFactory } from '../engines/canvas.js'
 import { Sugiyama, type Direction } from '../layout/sugiyama.js'
 import { rectangle as _rect, ellipse as _ellipse, diamond as _diamond, text as _text } from '../shapes/basic.js'
+import { ClassShape, type ClassShapeOpts } from '../shapes/uml.js'
+import { C4PersonShape, C4BoxShape, type C4ShapeOpts } from '../shapes/c4.js'
 
 export interface DiagramOpts {
   layout?: Layout
+  colors?: string[]
+  background?: string
+  description?: string
 }
 
 export class Diagram {
@@ -17,10 +22,16 @@ export class Diagram {
   readonly children: (Shape | Group)[] = []
   readonly connections: Connection[] = []
   readonly layout: Layout
+  readonly colors?: string[]
+  readonly background?: string
+  readonly description?: string
 
   constructor(title?: string, opts?: DiagramOpts) {
     this.title = title
     this.layout = opts?.layout ?? new Sugiyama()
+    this.colors = opts?.colors
+    this.background = opts?.background
+    this.description = opts?.description
   }
 
   private registrar = (conn: Connection) => {
@@ -40,7 +51,7 @@ export class Diagram {
     return g
   }
 
-  render(engine: Engine, factory: CanvasFactory): Uint8Array {
+  render(engine: Engine, factory: RenderTargetFactory): Uint8Array {
     return engine.render(this, factory)
   }
 
@@ -49,12 +60,16 @@ export class Diagram {
   }
 
   toJSON(): unknown {
-    return {
+    const json: Record<string, unknown> = {
       title: this.title,
       layout: this.layout.toJSON(),
       children: this.children.map(c => c.toJSON()),
       connections: this.connections.map(c => c.toJSON()),
     }
+    if (this.colors) json.colors = this.colors
+    if (this.background) json.background = this.background
+    if (this.description) json.description = this.description
+    return json
   }
 
   toCode(): string {
@@ -80,6 +95,14 @@ interface JsonShape {
   fillColor?: string
   strokeWidth?: number
   fontSize?: number
+  // UML class fields
+  stereotype?: string
+  fields?: string[]
+  methods?: string[]
+  // C4 fields
+  description?: string
+  technology?: string
+  external?: boolean
 }
 
 interface JsonGroup {
@@ -105,6 +128,9 @@ interface JsonConnection {
 
 interface JsonDiagram {
   title?: string
+  colors?: string[]
+  background?: string
+  description?: string
   layout?: { name: string; direction?: Direction; spacing?: number; layerSpacing?: number }
   children?: (JsonShape | JsonGroup)[]
   connections?: JsonConnection[]
@@ -122,7 +148,7 @@ export function diagramFromJson(json: string): Diagram {
     })
   }
 
-  const d = new Diagram(data.title, { layout })
+  const d = new Diagram(data.title, { layout, colors: data.colors, background: data.background, description: data.description })
   const nodeMap = new Map<string, Node>()
 
   function addChildren(parent: Diagram | Group, children: (JsonShape | JsonGroup)[]) {
@@ -149,7 +175,15 @@ export function diagramFromJson(json: string): Diagram {
           fillColor: sc.fillColor,
           strokeWidth: sc.strokeWidth,
           fontSize: sc.fontSize,
-        })
+          // UML class
+          stereotype: sc.stereotype,
+          fields: sc.fields,
+          methods: sc.methods,
+          // C4
+          description: sc.description,
+          technology: sc.technology,
+          external: sc.external,
+        } as ShapeOpts)
         parent.add(shape)
         nodeMap.set(shape.id, shape)
       }
@@ -190,6 +224,12 @@ function createShapeFromType(type: string, label: string, opts?: ShapeOpts): Sha
     case 'ellipse': return _ellipse(label, opts)
     case 'diamond': return _diamond(label, opts)
     case 'text': return _text(label, opts)
+    case 'class': return new ClassShape(label, opts as ClassShapeOpts)
+    case 'c4:person': return new C4PersonShape(label, opts as C4ShapeOpts)
+    case 'c4:system':
+    case 'c4:container':
+    case 'c4:component':
+    case 'c4:database': return new C4BoxShape(type as 'c4:system' | 'c4:container' | 'c4:component' | 'c4:database', label, opts as C4ShapeOpts)
     default: return _rect(label, opts)
   }
 }
@@ -224,14 +264,21 @@ function generateCode(d: Diagram): string {
   lines.push('')
 
   // Diagram creation
-  const layoutOpts: string[] = []
+  const diagOpts: string[] = []
   if (layoutJson.direction && layoutJson.direction !== 'TB') {
-    layoutOpts.push(`direction: "${layoutJson.direction}"`)
+    diagOpts.push(`layout: new Sugiyama({ direction: "${layoutJson.direction}" })`)
   }
-  const layoutStr = layoutOpts.length > 0
-    ? `, { layout: new Sugiyama({ ${layoutOpts.join(', ')} }) }`
-    : ''
-  lines.push(`const d = diagram(${d.title ? `"${d.title}"` : ''}${layoutStr})`)
+  if (d.colors) {
+    diagOpts.push(`colors: [${d.colors.map(c => `"${c}"`).join(', ')}]`)
+  }
+  if (d.background) {
+    diagOpts.push(`background: "${d.background}"`)
+  }
+  if (d.description) {
+    diagOpts.push(`description: ${JSON.stringify(d.description)}`)
+  }
+  const optsStr = diagOpts.length > 0 ? `, { ${diagOpts.join(', ')} }` : ''
+  lines.push(`const d = diagram(${d.title ? `"${d.title}"` : ''}${optsStr})`)
   lines.push('')
 
   function emitChildren(children: (Shape | Group)[], parentVar: string) {

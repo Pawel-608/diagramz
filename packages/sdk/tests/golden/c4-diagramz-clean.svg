@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1086" height="1038" viewBox="0 0 1086 1038">
+<rect width="1086" height="1038" fill="#fff"/>
+<path d="M225.10,40.00L580.70,40.00C586.22,40.00 590.70,44.48 590.70,50.00L590.70,172.00C590.70,177.52 586.22,182.00 580.70,182.00L225.10,182.00C219.58,182.00 215.10,177.52 215.10,172.00L215.10,50.00C215.10,44.48 219.58,40.00 225.10,40.00Z" fill="rgb(8,66,123)" stroke="none"/>
+<path d="M225.10,40.00L580.70,40.00C586.22,40.00 590.70,44.48 590.70,50.00L590.70,172.00C590.70,177.52 586.22,182.00 580.70,182.00L225.10,182.00C219.58,182.00 215.10,177.52 215.10,172.00L215.10,50.00C215.10,44.48 219.58,40.00 225.10,40.00Z" fill="none" stroke="rgb(255,255,255)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="402.90" y="106.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">AI Agent</text>
+<path d="M414.90,62.00C414.90,68.63 409.53,74.00 402.90,74.00C396.27,74.00 390.90,68.63 390.90,62.00C390.90,55.37 396.27,50.00 402.90,50.00C409.53,50.00 414.90,55.37 414.90,62.00Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M378.90,91.00C378.90,83.27 389.65,77.00 402.90,77.00C416.15,77.00 426.90,83.27 426.90,91.00Z" fill="rgb(255,255,255)" stroke="none"/>
+<text x="402.90" y="128.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Claude Code or other</text>
+<text x="402.90" y="144.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">AI coding assistants.</text>
+<text x="402.90" y="170.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="10.0" text-anchor="middle" dominant-baseline="central">[Person]</text>
+<path d="M695.40,40.00L1035.40,40.00C1040.92,40.00 1045.40,44.48 1045.40,50.00L1045.40,172.00C1045.40,177.52 1040.92,182.00 1035.40,182.00L695.40,182.00C689.88,182.00 685.40,177.52 685.40,172.00L685.40,50.00C685.40,44.48 689.88,40.00 695.40,40.00Z" fill="rgb(17,104,189)" stroke="none"/>
+<path d="M695.40,40.00L1035.40,40.00C1040.92,40.00 1045.40,44.48 1045.40,50.00L1045.40,172.00C1045.40,177.52 1040.92,182.00 1035.40,182.00L695.40,182.00C689.88,182.00 685.40,177.52 685.40,172.00L685.40,50.00C685.40,44.48 689.88,40.00 695.40,40.00Z" fill="none" stroke="rgb(255,255,255)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="865.40" y="106.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">Human User</text>
+<path d="M877.40,62.00C877.40,68.63 872.03,74.00 865.40,74.00C858.77,74.00 853.40,68.63 853.40,62.00C853.40,55.37 858.77,50.00 865.40,50.00C872.03,50.00 877.40,55.37 877.40,62.00Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M841.40,91.00C841.40,83.27 852.15,77.00 865.40,77.00C878.65,77.00 889.40,83.27 889.40,91.00Z" fill="rgb(255,255,255)" stroke="none"/>
+<text x="865.40" y="128.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Views and edits diagrams</text>
+<text x="865.40" y="144.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">in the browser.</text>
+<text x="865.40" y="170.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="10.0" text-anchor="middle" dominant-baseline="central">[Person]</text>
+<path d="M738.30,312.00L992.50,312.00C998.02,312.00 1002.50,316.48 1002.50,322.00L1002.50,444.00C1002.50,449.52 998.02,454.00 992.50,454.00L738.30,454.00C732.78,454.00 728.30,449.52 728.30,444.00L728.30,322.00C728.30,316.48 732.78,312.00 738.30,312.00Z" fill="rgb(67,141,213)" stroke="none"/>
+<path d="M738.30,312.00L992.50,312.00C998.02,312.00 1002.50,316.48 1002.50,322.00L1002.50,444.00C1002.50,449.52 998.02,454.00 992.50,454.00L738.30,454.00C732.78,454.00 728.30,449.52 728.30,444.00L728.30,322.00C728.30,316.48 732.78,312.00 738.30,312.00Z" fill="none" stroke="rgb(255,255,255)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="865.40" y="340.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">Web SPA</text>
+<text x="865.40" y="358.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">[React + WASM]</text>
+<text x="865.40" y="378.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Interactive canvas for</text>
+<text x="865.40" y="394.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">viewing and editing diagrams.</text>
+<text x="865.40" y="442.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="10.0" text-anchor="middle" dominant-baseline="central">[Container]</text>
+<path d="M540.60,584.00L748.00,584.00C753.52,584.00 758.00,588.48 758.00,594.00L758.00,716.00C758.00,721.52 753.52,726.00 748.00,726.00L540.60,726.00C535.08,726.00 530.60,721.52 530.60,716.00L530.60,594.00C530.60,588.48 535.08,584.00 540.60,584.00Z" fill="rgb(133,187,240)" stroke="none"/>
+<path d="M540.60,584.00L748.00,584.00C753.52,584.00 758.00,588.48 758.00,594.00L758.00,716.00C758.00,721.52 753.52,726.00 748.00,726.00L540.60,726.00C535.08,726.00 530.60,721.52 530.60,716.00L530.60,594.00C530.60,588.48 535.08,584.00 540.60,584.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="644.30" y="612.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">API Server</text>
+<text x="644.30" y="630.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">[Axum / Rust]</text>
+<text x="644.30" y="650.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">REST API for CRUD</text>
+<text x="644.30" y="666.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">operations on diagrams.</text>
+<text x="644.30" y="714.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="10.0" text-anchor="middle" dominant-baseline="central">[Container]</text>
+<path d="M685.50,856.00L900.70,856.00C906.22,856.00 910.70,860.48 910.70,866.00L910.70,988.00C910.70,993.52 906.22,998.00 900.70,998.00L685.50,998.00C679.98,998.00 675.50,993.52 675.50,988.00L675.50,866.00C675.50,860.48 679.98,856.00 685.50,856.00Z" fill="rgb(153,153,153)" stroke="none"/>
+<path d="M685.50,856.00L900.70,856.00C906.22,856.00 910.70,860.48 910.70,866.00L910.70,988.00C910.70,993.52 906.22,998.00 900.70,998.00L685.50,998.00C679.98,998.00 675.50,993.52 675.50,988.00L675.50,866.00C675.50,860.48 679.98,856.00 685.50,856.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="793.10" y="884.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">Renderer</text>
+<text x="793.10" y="902.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">[tiny-skia / Rust]</text>
+<text x="793.10" y="922.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Shared rendering engine.</text>
+<text x="793.10" y="938.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Pixel + SVG output.</text>
+<text x="793.10" y="986.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="10.0" text-anchor="middle" dominant-baseline="central">[Container]</text>
+<path d="M405.50,856.00L585.50,856.00C591.02,856.00 595.50,860.48 595.50,866.00L595.50,988.00C595.50,993.52 591.02,998.00 585.50,998.00L405.50,998.00C399.98,998.00 395.50,993.52 395.50,988.00L395.50,866.00C395.50,860.48 399.98,856.00 405.50,856.00Z" fill="rgb(107,157,200)" stroke="none"/>
+<path d="M405.50,856.00L585.50,856.00C591.02,856.00 595.50,860.48 595.50,866.00L595.50,988.00C595.50,993.52 591.02,998.00 585.50,998.00L405.50,998.00C399.98,998.00 395.50,993.52 395.50,988.00L395.50,866.00C395.50,860.48 399.98,856.00 405.50,856.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="495.50" y="884.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">SQLite</text>
+<text x="495.50" y="902.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">[rusqlite / WAL]</text>
+<text x="495.50" y="922.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Stores diagram JSON</text>
+<text x="495.50" y="938.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">with 30-day TTL.</text>
+<text x="495.50" y="986.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="10.0" text-anchor="middle" dominant-baseline="central">[Database]</text>
+<path d="M50.00,312.00L273.00,312.00C278.52,312.00 283.00,316.48 283.00,322.00L283.00,444.00C283.00,449.52 278.52,454.00 273.00,454.00L50.00,454.00C44.48,454.00 40.00,449.52 40.00,444.00L40.00,322.00C40.00,316.48 44.48,312.00 50.00,312.00Z" fill="rgb(8,66,123)" stroke="none"/>
+<path d="M50.00,312.00L273.00,312.00C278.52,312.00 283.00,316.48 283.00,322.00L283.00,444.00C283.00,449.52 278.52,454.00 273.00,454.00L50.00,454.00C44.48,454.00 40.00,449.52 40.00,444.00L40.00,322.00C40.00,316.48 44.48,312.00 50.00,312.00Z" fill="none" stroke="rgb(255,255,255)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="161.50" y="340.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">SDK</text>
+<text x="161.50" y="358.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">[TypeScript]</text>
+<text x="161.50" y="378.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Diagrams-as-code library.</text>
+<text x="161.50" y="394.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Published to npm.</text>
+<text x="161.50" y="442.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="10.0" text-anchor="middle" dominant-baseline="central">[External Software System]</text>
+<path d="M402.90,182.00L402.90,282.50L644.30,282.50L644.30,383.00L644.30,584.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M648.41,595.27L644.30,584.00L640.19,595.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M419.80,364.00L627.40,364.00L627.40,382.00L419.80,382.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="523.60" y="375.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">POST/PATCH diagrams via REST</text>
+<path d="M402.90,182.00L402.90,247.00L161.50,247.00L161.50,312.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M165.61,323.27L161.50,312.00L157.39,323.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M207.20,228.00L357.20,228.00L357.20,246.00L207.20,246.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="282.20" y="239.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Builds diagrams with</text>
+<path d="M865.40,182.00L865.40,312.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M869.51,323.27L865.40,312.00L861.29,323.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M776.00,228.00L954.80,228.00L954.80,246.00L776.00,246.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="865.40" y="239.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Views and edits diagrams</text>
+<path d="M865.40,454.00L865.40,519.00L644.30,519.00L644.30,584.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M648.41,595.27L644.30,584.00L640.19,595.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M679.85,500.00L829.85,500.00L829.85,518.00L679.85,518.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="754.85" y="511.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Fetches diagram data</text>
+<path d="M865.40,454.00L865.40,554.50L842.00,554.50L842.00,655.00L842.00,755.50L793.10,755.50L793.10,856.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M797.21,867.27L793.10,856.00L788.99,867.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M768.65,636.00L889.85,636.00L889.85,654.00L768.65,654.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="829.25" y="647.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Renders via WASM</text>
+<path d="M644.30,726.00L644.30,791.00L793.10,791.00L793.10,856.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M797.21,867.27L793.10,856.00L788.99,867.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M661.70,772.00L775.70,772.00L775.70,790.00L661.70,790.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="718.70" y="783.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Renders PNG/SVG</text>
+<path d="M644.30,726.00L644.30,791.00L495.50,791.00L495.50,856.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M499.61,867.27L495.50,856.00L491.39,867.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M491.30,772.00L648.50,772.00L648.50,790.00L491.30,790.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="569.90" y="783.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Reads/writes diagrams</text>
+</svg>

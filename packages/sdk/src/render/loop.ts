@@ -1,12 +1,11 @@
 import type { Diagram } from '../core/diagram.js'
-import type { Canvas, CanvasFactory } from '../engines/canvas.js'
-import type { Engine } from '../engines/engine.js'
-import { SvgCanvas, svgCanvasFactory } from '../engines/svg-canvas.js'
+import type { Canvas, RenderTarget, RenderTargetFactory } from '../engines/canvas.js'
+import { SvgTarget, svgTargetFactory } from '../engines/svg-canvas.js'
 import { Shape, resolveSize } from '../core/shape.js'
 import { Group } from '../core/group.js'
-import { PathBuilder, translatePath } from '../core/path.js'
+import { DefaultPathBuilder } from '../core/path.js'
 import { parseColor } from '../core/color.js'
-import { connectionEndpoints, arrowheadPath, labelPosition, nodeCenter, clipToNode, type Point } from './connections.js'
+import { applyPalette } from '../themes/index.js'
 
 interface Bounds {
   minX: number
@@ -103,17 +102,14 @@ class ScaledCanvas implements Canvas {
   strokePathDashed(segs: Float64Array, color: number, width: number, dash: number): void {
     this.inner.strokePathDashed(scalePath(segs, this.s), color, width * this.s, dash * this.s)
   }
+  fillAndStrokePath(segs: Float64Array, fillColor: number, strokeColor: number, strokeWidth: number): void {
+    this.inner.fillAndStrokePath(scalePath(segs, this.s), fillColor, strokeColor, strokeWidth * this.s)
+  }
   drawText(text: string, x: number, y: number, size: number, color: number, font: number): void {
     this.inner.drawText(text, x * this.s, y * this.s, size * this.s, color, font)
   }
   measureText(text: string, size: number, font: number): [number, number] {
     return this.inner.measureText(text, size, font)
-  }
-  toPng(): Uint8Array {
-    return this.inner.toPng()
-  }
-  toImageData(): Uint8Array {
-    return this.inner.toImageData()
   }
 }
 
@@ -123,6 +119,7 @@ export interface RenderOpts {
 }
 
 export interface RenderResult {
+  target: RenderTarget
   canvas: Canvas
   offsetX: number
   offsetY: number
@@ -130,10 +127,12 @@ export interface RenderResult {
   height: number
 }
 
+export type CanvasWrapper = (target: Canvas) => Canvas
+
 function renderInternal(
   diagram: Diagram,
-  engine: Engine,
-  factory: CanvasFactory,
+  wrapCanvas: CanvasWrapper,
+  factory: RenderTargetFactory,
   opts?: RenderOpts,
 ): RenderResult {
   const scale = opts?.scale ?? 2
@@ -145,120 +144,97 @@ function renderInternal(
   const shapes = collectAllShapes(diagram.children)
   const groups = collectAllGroups(diagram.children)
 
+  // Apply palette defaults to shapes/groups that lack explicit colors
+  if (diagram.colors && diagram.colors.length > 0) {
+    applyPalette(shapes, groups, diagram.colors)
+  }
+
   const bounds = computeBounds(shapes, groups)
   const padding = 40
-  const width = Math.ceil(bounds.maxX - bounds.minX + padding * 2)
-  const height = Math.ceil(bounds.maxY - bounds.minY + padding * 2)
 
-  const rawCanvas = factory.create(Math.max(width * scale, 1), Math.max(height * scale, 1))
-  const canvas: Canvas = scale === 1 ? rawCanvas : new ScaledCanvas(rawCanvas, scale)
+  // Reserve space for description legend below diagram
+  const descLines = diagram.description ? diagram.description.split('\n') : []
+  const descFontSize = 13
+  const descLineHeight = 18
+  const descPaddingTop = descLines.length > 0 ? 24 : 0
+  const descHeight = descLines.length > 0 ? descPaddingTop + descLines.length * descLineHeight + 8 : 0
+
+  const width = Math.ceil(bounds.maxX - bounds.minX + padding * 2)
+  const height = Math.ceil(bounds.maxY - bounds.minY + padding * 2 + descHeight)
+
+  const target = factory.create(Math.max(width * scale, 1), Math.max(height * scale, 1))
+  const styledCanvas = wrapCanvas(target)
+  const canvas: Canvas = scale === 1 ? styledCanvas : new ScaledCanvas(styledCanvas, scale)
+
+  // Fill background if specified
+  if (diagram.background) {
+    const bgRect = new DefaultPathBuilder()
+      .moveTo(0, 0)
+      .lineTo(width, 0)
+      .lineTo(width, height)
+      .lineTo(0, height)
+      .close()
+      .build()
+    canvas.fillPath(bgRect, parseColor(diagram.background))
+  }
 
   const offsetX = -bounds.minX + padding
   const offsetY = -bounds.minY + padding
 
-  // Render groups (deepest first)
+  // Render groups (deepest first) — groups render themselves
   for (let i = groups.length - 1; i >= 0; i--) {
-    const g = groups[i]
-    const b = g.bounds()
-    if (!b) continue
-    engine.renderGroup(g, b, offsetX, offsetY, canvas)
+    groups[i].render(canvas, offsetX, offsetY)
   }
 
-  // Render shapes
-  for (const shape of shapes) {
-    const [w, h] = resolveSize(shape)
-    engine.renderElement(shape, w, h, offsetX, offsetY, canvas)
-  }
-
-  // Render connections
+  // Render connections BEFORE shapes so they appear behind nodes
   const offset = { x: offsetX, y: offsetY }
   for (const conn of diagram.connections) {
-    const waypoints = conn.waypoints ?? []
-    let fromPt: Point, toPt: Point, linePath: Float64Array, angle: number
+    conn.render(canvas, offset)
+  }
 
-    if (waypoints.length > 0) {
-      const fromCenter = nodeCenter(conn.from)
-      const toCenter = nodeCenter(conn.target)
+  // Render shapes — shapes render themselves (on top of connections)
+  for (const shape of shapes) {
+    shape.render(canvas, offsetX, offsetY)
+  }
 
-      const fdx = waypoints[0].x - fromCenter.x
-      const fdy = waypoints[0].y - fromCenter.y
-      const fromAngle = Math.atan2(fdy, fdx * 0.3)
-      fromPt = clipToNode(conn.from, fromAngle, offset)
-
-      const lastWp = waypoints[waypoints.length - 1]
-      const tdx = lastWp.x - toCenter.x
-      const tdy = lastWp.y - toCenter.y
-      const toAngle = Math.atan2(tdy, tdx * 0.3)
-      toPt = clipToNode(conn.target, toAngle, offset)
-
-      const pb = new PathBuilder().moveTo(fromPt.x, fromPt.y)
-      for (const wp of waypoints) {
-        pb.lineTo(wp.x + offset.x, wp.y + offset.y)
-      }
-      pb.lineTo(toPt.x, toPt.y)
-      linePath = pb.build()
-
-      angle = Math.atan2(toPt.y - (lastWp.y + offset.y), toPt.x - (lastWp.x + offset.x))
-    } else {
-      const result = connectionEndpoints(conn.from, conn.target, offset)
-      fromPt = result.from
-      toPt = result.to
-      angle = result.angle
-      linePath = new PathBuilder()
-        .moveTo(fromPt.x, fromPt.y)
-        .lineTo(toPt.x, toPt.y)
-        .build()
-    }
-
-    engine.renderConnection(linePath, conn, fromPt, toPt, angle, canvas)
-
-    if (conn.label) {
-      let labelPt: Point
-      if (waypoints.length > 0) {
-        const midIdx = Math.floor(waypoints.length / 2)
-        labelPt = { x: waypoints[midIdx].x + offset.x, y: waypoints[midIdx].y + offset.y - 8 }
-      } else {
-        labelPt = labelPosition(fromPt, toPt)
-      }
-      const [tw] = canvas.measureText(conn.label, 12, engine.font)
-      const pad = 3
-      const bgRect = new PathBuilder()
-        .moveTo(labelPt.x - tw / 2 - pad, labelPt.y - 8 - pad)
-        .lineTo(labelPt.x + tw / 2 + pad, labelPt.y - 8 - pad)
-        .lineTo(labelPt.x + tw / 2 + pad, labelPt.y + 4 + pad)
-        .lineTo(labelPt.x - tw / 2 - pad, labelPt.y + 4 + pad)
-        .close().build()
-      canvas.fillPath(bgRect, 0xf8f8f8e0)
-      canvas.drawText(conn.label, labelPt.x, labelPt.y, 12, parseColor(conn.color ?? '#000000'), engine.font)
+  // Render description legend below diagram
+  if (descLines.length > 0) {
+    const descY = bounds.maxY - bounds.minY + padding * 2 + descPaddingTop
+    const descColor = parseColor('#666666')
+    for (let i = 0; i < descLines.length; i++) {
+      const line = descLines[i]
+      const [tw] = canvas.measureText(line, descFontSize, 0)
+      const lx = (width - tw) / 2
+      canvas.drawText(line, lx, descY + i * descLineHeight, descFontSize, descColor, 0)
     }
   }
 
-  return { canvas: rawCanvas, offsetX, offsetY, width, height }
+  return { target, canvas, offsetX, offsetY, width, height }
 }
 
 export function renderDiagram(
   diagram: Diagram,
-  engine: Engine,
-  factory: CanvasFactory,
+  wrapCanvas: CanvasWrapper,
+  factory: RenderTargetFactory,
   opts?: RenderOpts,
 ): Uint8Array {
-  return renderInternal(diagram, engine, factory, opts).canvas.toPng()
+  return renderInternal(diagram, wrapCanvas, factory, opts).target.toPng()
 }
 
 export function renderDiagramToCanvas(
   diagram: Diagram,
-  engine: Engine,
-  factory: CanvasFactory,
+  wrapCanvas: CanvasWrapper,
+  factory: RenderTargetFactory,
   opts?: RenderOpts,
 ): RenderResult {
-  return renderInternal(diagram, engine, factory, opts)
+  return renderInternal(diagram, wrapCanvas, factory, opts)
 }
 
 export function renderToSvg(
   diagram: Diagram,
-  engine: Engine,
+  wrapCanvas: CanvasWrapper,
   opts?: Omit<RenderOpts, 'scale'>,
 ): string {
-  const result = renderInternal(diagram, engine, svgCanvasFactory, { ...opts, scale: 1 })
-  return (result.canvas as SvgCanvas).toSvg()
+  const result = renderInternal(diagram, wrapCanvas, svgTargetFactory, { ...opts, scale: 1 })
+  return (result.target as SvgTarget).toSvg()
 }

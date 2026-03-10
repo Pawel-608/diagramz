@@ -1,4 +1,4 @@
-import type { Canvas, CanvasFactory } from './canvas.js'
+import type { RenderTarget, RenderTargetFactory } from './canvas.js'
 
 const FONTS = [
   '"Architects Daughter", cursive',  // font 0 = sketchy
@@ -42,7 +42,7 @@ function escapeXml(s: string): string {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 }
 
-export class SvgCanvas implements Canvas {
+export class SvgTarget implements RenderTarget {
   private elements: string[] = []
   private w: number
   private h: number
@@ -90,13 +90,17 @@ export class SvgCanvas implements Canvas {
     return [maxW, lines.length * size * 1.4]
   }
 
+  fillAndStrokePath(segs: Float64Array, fillColor: number, strokeColor: number, strokeWidth: number): void {
+    this.fillPath(segs, fillColor)
+    this.strokePath(segs, strokeColor, strokeWidth)
+  }
+
   toPng(): Uint8Array {
-    // Not applicable for SVG canvas
-    throw new Error('SvgCanvas does not support toPng()')
+    throw new Error('SvgTarget does not support toPng()')
   }
 
   toImageData(): Uint8Array {
-    throw new Error('SvgCanvas does not support toImageData()')
+    throw new Error('SvgTarget does not support toImageData()')
   }
 
   toSvg(): string {
@@ -104,8 +108,9 @@ export class SvgCanvas implements Canvas {
   }
 }
 
-export const svgCanvasFactory: CanvasFactory = {
-  create(width: number, height: number): Canvas {
-    return new SvgCanvas(width, height)
+export const svgTargetFactory: RenderTargetFactory = {
+  create(width: number, height: number): RenderTarget {
+    return new SvgTarget(width, height)
   },
 }
+

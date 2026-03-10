@@ -1,7 +1,7 @@
 import { createRequire } from 'node:module'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
-import type { Canvas, CanvasFactory } from './engines/canvas.js'
+import type { RenderTarget, RenderTargetFactory } from './engines/canvas.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -30,7 +30,7 @@ interface WasmCanvasInstance {
   free(): void
 }
 
-class WasmCanvasAdapter implements Canvas {
+class WasmTarget implements RenderTarget {
   private inner: WasmCanvasInstance
 
   constructor(width: number, height: number) {
@@ -59,6 +59,11 @@ class WasmCanvasAdapter implements Canvas {
     return [result[0], result[1]]
   }
 
+  fillAndStrokePath(segs: Float64Array, fillColor: number, strokeColor: number, strokeWidth: number): void {
+    this.fillPath(segs, fillColor)
+    this.strokePath(segs, strokeColor, strokeWidth)
+  }
+
   toPng(): Uint8Array {
     return this.inner.toPng()
   }
@@ -68,8 +73,8 @@ class WasmCanvasAdapter implements Canvas {
   }
 }
 
-export const wasmCanvasFactory: CanvasFactory = {
-  create(width: number, height: number): Canvas {
-    return new WasmCanvasAdapter(width, height)
+export const wasmTargetFactory: RenderTargetFactory = {
+  create(width: number, height: number): RenderTarget {
+    return new WasmTarget(width, height)
   },
 }

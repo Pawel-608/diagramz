@@ -1,6 +1,16 @@
 import type { Node } from './node.js'
+import type { Canvas } from '../engines/canvas.js'
+import { DefaultPathBuilder } from './path.js'
+import { parseColor } from './color.js'
+import {
+  orthogonalRoute,
+  arrowheadPath,
+  triangleHeadPath,
+  diamondDecorPath,
+  type Point,
+} from '../render/connections.js'
 
-export type ConnectionType = 'arrow' | 'line'
+export type ConnectionType = 'arrow' | 'line' | 'inherit' | 'implement' | 'compose' | 'aggregate' | 'depend'
 
 export interface ConnectionOpts {
   type?: ConnectionType
@@ -30,6 +40,52 @@ export class Connection {
     this.color = opts?.color
     this.strokeWidth = opts?.strokeWidth
     this.strokeDash = opts?.strokeDash
+  }
+
+  render(canvas: Canvas, offset: { x: number; y: number }): void {
+    const route = orthogonalRoute(this.from, this.target, offset, this.waypoints ?? [])
+    const { from: fromPt, to: toPt, path: linePath, angle } = route
+
+    const color = parseColor(this.color ?? '#333333')
+    const sw = this.strokeWidth ?? 1.5
+
+    const dashed = this.strokeDash || this.type === 'implement' || this.type === 'depend'
+    if (dashed) {
+      canvas.strokePathDashed(linePath, color, sw, this.strokeDash?.[0] ?? 6)
+    } else {
+      canvas.strokePath(linePath, color, sw)
+    }
+
+    const t = this.type
+    if (t === 'arrow' || t === 'depend') {
+      canvas.strokePath(arrowheadPath(toPt, angle, 12), color, 2)
+    } else if (t === 'inherit' || t === 'implement') {
+      const tri = triangleHeadPath(toPt, angle, 12)
+      canvas.fillPath(tri, 0xffffffff)
+      canvas.strokePath(tri, color, 1.5)
+    } else if (t === 'compose') {
+      const dm = diamondDecorPath(fromPt, angle, 8)
+      canvas.fillPath(dm, color)
+      canvas.strokePath(dm, color, 1)
+    } else if (t === 'aggregate') {
+      const dm = diamondDecorPath(fromPt, angle, 8)
+      canvas.fillPath(dm, 0xffffffff)
+      canvas.strokePath(dm, color, 1.5)
+    }
+
+    if (this.label) {
+      const labelPt = route.midPoint
+      const [tw] = canvas.measureText(this.label, 12, 0)
+      const pad = 3
+      const bgRect = new DefaultPathBuilder()
+        .moveTo(labelPt.x - tw / 2 - pad, labelPt.y - 8 - pad)
+        .lineTo(labelPt.x + tw / 2 + pad, labelPt.y - 8 - pad)
+        .lineTo(labelPt.x + tw / 2 + pad, labelPt.y + 4 + pad)
+        .lineTo(labelPt.x - tw / 2 - pad, labelPt.y + 4 + pad)
+        .close().build()
+      canvas.fillPath(bgRect, 0xf8f8f8e0)
+      canvas.drawText(this.label, labelPt.x, labelPt.y, 12, parseColor(this.color ?? '#000000'), 0)
+    }
   }
 
   toJSON() {

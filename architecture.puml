@@ -1,0 +1,195 @@
+@startuml
+skinparam linetype ortho
+skinparam groupInheritance 2
+
+title Diagramz SDK — Current Architecture
+
+package "core/nodes" {
+  class Diagram {
+    -children: (Shape|Group)[]
+    -connections: Connection[]
+    -layout: Layout
+    +add(shape: T): T
+    +group(label): Group
+    +render(engine, factory): Uint8Array
+  }
+
+  interface Node {
+    +id: string
+    +label: string
+    +to(target, label?, opts?): Connection
+  }
+
+  abstract class Shape {
+    +x, y, width, height
+    +color, fillColor
+    +outline(w, h): Float64Array
+    +clipPoint(w, h, angle)
+    +render(canvas, ox, oy)
+  }
+
+  class Group {
+    +children: (Shape|Group)[]
+    +fillColor?: string
+    +add(shape: T): T
+    +render(canvas, ox, oy)
+  }
+}
+
+package "core/connections" {
+  class Connection {
+    +from, target: Node
+    +type: ConnectionType
+    +label?: string
+    +waypoints: Point[]
+    +render(canvas, offset)
+  }
+
+  interface PathBuilder {
+    +moveTo(x, y): this
+    +lineTo(x, y): this
+    +close(): this
+    +build(): Float64Array
+  }
+}
+
+package "shapes/basic" {
+  class RectangleShape {
+    +outline()
+    +clipPoint()
+  }
+  class EllipseShape {
+    +outline()
+    +clipPoint()
+  }
+  class DiamondShape {
+    +outline()
+    +clipPoint()
+  }
+  class TextShape {
+    +outline()
+    +clipPoint()
+  }
+}
+
+package "shapes/uml" {
+  class ClassShape {
+    +stereotype?: string
+    +fields: Field[]
+    +methods: Method[]
+    +render(canvas, ox, oy)
+    +renderDetails(canvas, ...)
+  }
+}
+
+package "shapes/c4" {
+  class C4PersonShape {
+    +render(canvas, ox, oy)
+    +renderDetails()
+  }
+  class C4BoxShape {
+    +technology?: string
+    +description?: string
+    +render(canvas, ox, oy)
+    +renderDetails()
+  }
+}
+
+package "layout/" {
+  interface Layout {
+    +apply(diagram): void
+  }
+  class Sugiyama {
+    +direction: TB|LR|BT|RL
+    +spacing: number
+    +apply(diagram): void
+  }
+}
+
+package "engines/" {
+  interface Canvas {
+    +fillPath()
+    +strokePath()
+    +fillAndStrokePath()
+    +drawText()
+    +measureText()
+  }
+
+  interface RenderTarget {
+    +toPng(): Uint8Array
+    +toImageData(): Uint8Array
+  }
+
+  class CleanCanvas {
+    -target: Canvas
+    +fillAndStrokePath(→ fill + stroke)
+  }
+
+  class RoughCanvas {
+    -target: Canvas
+    +roughness: number
+    +seed: number
+    +fillAndStrokePath(→ hachure + wobble)
+  }
+
+  class SvgTarget {
+    +toSvg(): string
+  }
+
+  class WasmTarget {
+    -inner: RustCanvas
+  }
+}
+
+package "themes/" {
+  interface Theme {
+    +name: string
+    +shape: Record<type, colors>
+  }
+}
+
+' Node hierarchy
+Shape ..|> Node
+Group ..|> Node
+
+' Diagram composition
+Diagram *-- Node
+Diagram *-- Connection
+Diagram o-- Layout
+Diagram ..> Theme
+
+' Shape subtypes
+RectangleShape --|> Shape
+EllipseShape --|> Shape
+DiamondShape --|> Shape
+TextShape --|> Shape
+ClassShape --|> Shape
+C4PersonShape --|> Shape
+C4BoxShape --|> Shape
+
+' Layout
+Sugiyama ..|> Layout
+
+' RenderTarget extends Canvas
+RenderTarget --|> Canvas
+
+' Canvas implementations
+CleanCanvas ..|> Canvas
+RoughCanvas ..|> Canvas
+
+' RenderTarget implementations
+SvgTarget ..|> RenderTarget
+WasmTarget ..|> RenderTarget
+
+' Canvas decorators
+CleanCanvas o-- Canvas : wraps
+RoughCanvas o-- Canvas : wraps
+
+' Dependencies on Canvas
+Shape ..> Canvas
+Group ..> Canvas
+Connection ..> Canvas
+Shape ..> PathBuilder
+Connection ..> PathBuilder
+
+@enduml

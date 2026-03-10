@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="986" height="774" viewBox="0 0 986 774">
+<rect width="986" height="774" fill="#fff"/>
+<path d="M40.00,314.00L290.40,314.00L290.40,446.00L40.00,446.00Z" fill="rgb(187,222,251)" stroke="none"/>
+<path d="M40.00,314.00L290.40,314.00L290.40,446.00L40.00,446.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="165.20" y="329.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">Order</text>
+<path d="M40.00,344.00L290.40,344.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="80.40" y="356.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">-id: UUID</text>
+<text x="116.40" y="374.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">-items: OrderItem[]</text>
+<text x="94.80" y="392.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">-total: Money</text>
+<path d="M40.00,404.00L290.40,404.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="148.80" y="416.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+addItem(product, qty): void</text>
+<text x="102.00" y="434.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+submit(): void</text>
+<path d="M85.20,606.00L245.20,606.00L245.20,734.00L85.20,734.00Z" fill="rgb(200,230,201)" stroke="none"/>
+<path d="M85.20,606.00L245.20,606.00L245.20,734.00L85.20,734.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="165.20" y="636.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">OrderStatus</text>
+<text x="165.20" y="620.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">«enum»</text>
+<path d="M85.20,650.00L245.20,650.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="114.80" y="662.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+DRAFT</text>
+<text x="129.20" y="680.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+SUBMITTED</text>
+<text x="111.20" y="698.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+PAID</text>
+<text x="122.00" y="716.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+SHIPPED</text>
+<path d="M85.20,728.00L245.20,728.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M387.10,40.00L629.70,40.00L629.70,154.00L387.10,154.00Z" fill="rgb(255,224,178)" stroke="none"/>
+<path d="M387.10,40.00L629.70,40.00L629.70,154.00L387.10,154.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="508.40" y="55.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">OrderService</text>
+<path d="M387.10,70.00L629.70,70.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="474.30" y="82.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">-repo: OrderRepository</text>
+<text x="481.50" y="100.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">-payment: PaymentGateway</text>
+<path d="M387.10,112.00L629.70,112.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="485.10" y="124.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+createOrder(cart): Order</text>
+<text x="492.30" y="142.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+checkout(orderId): Payment</text>
+<path d="M410.40,334.00L606.40,334.00L606.40,426.00L410.40,426.00Z" fill="rgb(225,190,231)" stroke="none"/>
+<path d="M410.40,334.00L606.40,334.00L606.40,426.00L410.40,426.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="508.40" y="364.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">OrderRepository</text>
+<text x="508.40" y="348.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">«interface»</text>
+<path d="M410.40,378.00L606.40,378.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M410.40,384.00L606.40,384.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="490.40" y="396.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+findById(id): Order</text>
+<text x="483.20" y="414.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+save(order): void</text>
+<path d="M726.40,334.00L945.60,334.00L945.60,426.00L726.40,426.00Z" fill="rgb(255,249,196)" stroke="none"/>
+<path d="M726.40,334.00L945.60,334.00L945.60,426.00L726.40,426.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="836.00" y="364.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">PaymentGateway</text>
+<text x="836.00" y="348.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">«interface»</text>
+<path d="M726.40,378.00L945.60,378.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M726.40,384.00L945.60,384.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="820.80" y="396.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+charge(amount): Payment</text>
+<text x="795.60" y="414.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+refund(id): void</text>
+<path d="M387.10,97.00L338.75,97.00L338.75,380.00L290.40,380.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round" stroke-dasharray="6 6"/>
+<path d="M279.13,384.11L290.40,380.00L279.13,375.89" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M310.55,219.50L366.95,219.50L366.95,237.50L310.55,237.50Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="338.75" y="230.50" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">creates</text>
+<path d="M508.40,154.00L508.40,334.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M508.40,154.00L512.00,146.00L508.40,138.00L504.80,146.00Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M508.40,154.00L512.00,146.00L508.40,138.00L504.80,146.00Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M629.70,97.00L678.05,97.00L678.05,380.00L726.40,380.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M629.70,97.00L621.70,93.40L613.70,97.00L621.70,100.60Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M629.70,97.00L621.70,93.40L613.70,97.00L621.70,100.60Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M165.20,446.00L165.20,606.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M165.20,446.00L168.80,438.00L165.20,430.00L161.60,438.00Z" fill="rgb(51,51,51)" stroke="none"/>
+<path d="M165.20,446.00L168.80,438.00L165.20,430.00L161.60,438.00Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.00" stroke-linecap="round"/>
+</svg>

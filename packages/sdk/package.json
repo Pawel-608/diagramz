@@ -1,6 +1,6 @@
 {
   "name": "diagramz",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Diagrams as code — build, render, and share diagrams from JavaScript",
   "type": "module",
   "main": "dist/index.js",
@@ -8,8 +8,11 @@
   "exports": {
     ".": "./dist/index.js",
     "./shapes/basic": "./dist/shapes/basic.js",
+    "./shapes/uml": "./dist/shapes/uml.js",
+    "./shapes/c4": "./dist/shapes/c4.js",
     "./engines": "./dist/engines/index.js",
     "./layout": "./dist/layout/index.js",
+    "./themes": "./dist/themes/index.js",
     "./wasm-canvas": "./dist/wasm-canvas.js"
   },
   "bin": {

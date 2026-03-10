@@ -13,7 +13,8 @@ register(pathToFileURL(join(__dirname, 'loader.js')).href, { parentURL: import.m
 const { Diagram } = await import('./core/diagram.js')
 const { CleanEngine } = await import('./engines/clean.js')
 const { RoughEngine } = await import('./engines/rough.js')
-const { wasmCanvasFactory } = await import('./wasm-canvas.js')
+const { wasmTargetFactory } = await import('./wasm-canvas.js')
+const { renderToSvg } = await import('./render/loop.js')
 
 const args = process.argv.slice(2)
 
@@ -21,7 +22,7 @@ if (args.length === 0 || args.includes('--help') || args.includes('-h')) {
   console.log(`Usage: diagramz <input.js> [options]
 
 Options:
-  -o, --output <file>    Output PNG file (default: diagram.png)
+  -o, --output <file>    Output file (default: diagram.png, use .svg for SVG)
   -e, --engine <name>    Engine: rough | clean (default: rough)
   -s, --scale <number>   Scale factor (default: 2)
   -h, --help             Show this help
@@ -83,7 +84,16 @@ if (!d || !(d instanceof Diagram)) {
 }
 
 const engine = engineName === 'clean' ? new CleanEngine() : new RoughEngine()
-const png = engine.render(d, wasmCanvasFactory, { scale })
+const isSvg = outputFile.endsWith('.svg')
 
-writeFileSync(outputFile, png)
-console.log(`Rendered ${outputFile} (${png.length} bytes)`)
+const wrapCanvas = (t: import('./engines/canvas.js').Canvas) => engine.createCanvas(t)
+
+if (isSvg) {
+  const svg = renderToSvg(d, wrapCanvas)
+  writeFileSync(outputFile, svg)
+  console.log(`Rendered ${outputFile} (${svg.length} bytes)`)
+} else {
+  const png = engine.render(d, wasmTargetFactory, { scale })
+  writeFileSync(outputFile, png)
+  console.log(`Rendered ${outputFile} (${png.length} bytes)`)
+}

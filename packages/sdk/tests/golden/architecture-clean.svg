@@ -1,0 +1,287 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="6351" height="1390" viewBox="0 0 6351 1390">
+<rect width="6351" height="1390" fill="#fff"/>
+<path d="M4651.45,280.00L5150.55,280.00L5150.55,908.00L4651.45,908.00Z" fill="rgb(254,245,240)" stroke="none"/>
+<path d="M4651.45,280.00L5150.55,280.00L5150.55,908.00L4651.45,908.00Z" fill="none" stroke="rgb(184,148,106)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="4659.45" y="296.00" fill="rgb(184,148,106)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">core/connections</text>
+<path d="M2366.40,40.00L4298.85,40.00L4298.85,688.00L2366.40,688.00Z" fill="rgb(245,248,254)" stroke="none"/>
+<path d="M2366.40,40.00L4298.85,40.00L4298.85,688.00L2366.40,688.00Z" fill="none" stroke="rgb(138,154,184)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="2374.40" y="56.00" fill="rgb(138,154,184)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">core/nodes</text>
+<path d="M6019.75,300.00L6310.15,300.00L6310.15,432.00L6019.75,432.00Z" fill="rgb(248,244,252)" stroke="none"/>
+<path d="M6019.75,300.00L6310.15,300.00L6310.15,432.00L6019.75,432.00Z" fill="none" stroke="rgb(160,138,184)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="6027.75" y="316.00" fill="rgb(160,138,184)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">themes/</text>
+<path d="M940.20,960.00L2410.48,960.00L2410.48,1350.00L940.20,1350.00Z" fill="rgb(253,248,240)" stroke="none"/>
+<path d="M940.20,960.00L2410.48,960.00L2410.48,1350.00L940.20,1350.00Z" fill="none" stroke="rgb(196,164,106)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="948.20" y="976.00" fill="rgb(196,164,106)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">engines/</text>
+<path d="M5185.55,309.00L5436.95,309.00L5436.95,663.00L5185.55,663.00Z" fill="rgb(243,250,245)" stroke="none"/>
+<path d="M5185.55,309.00L5436.95,309.00L5436.95,663.00L5185.55,663.00Z" fill="none" stroke="rgb(125,170,138)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="5193.55" y="325.00" fill="rgb(125,170,138)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">layout/</text>
+<path d="M5471.95,747.00L5984.75,747.00L5984.75,901.00L5471.95,901.00Z" fill="rgb(245,247,254)" stroke="none"/>
+<path d="M5471.95,747.00L5984.75,747.00L5984.75,901.00L5471.95,901.00Z" fill="none" stroke="rgb(122,134,196)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="5479.95" y="763.00" fill="rgb(122,134,196)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">shapes/c4</text>
+<path d="M4333.85,738.00L4616.45,738.00L4616.45,910.00L4333.85,910.00Z" fill="rgb(254,245,249)" stroke="none"/>
+<path d="M4333.85,738.00L4616.45,738.00L4616.45,910.00L4333.85,910.00Z" fill="none" stroke="rgb(184,112,138)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="4341.85" y="754.00" fill="rgb(184,112,138)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">shapes/uml</text>
+<path d="M40.00,765.00L905.20,765.00L905.20,883.00L40.00,883.00Z" fill="rgb(254,247,245)" stroke="none"/>
+<path d="M40.00,765.00L905.20,765.00L905.20,883.00L40.00,883.00Z" fill="none" stroke="rgb(196,134,122)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="48.00" y="781.00" fill="rgb(196,134,122)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">shapes/basic</text>
+<path d="M60.00,785.00L245.60,785.00L245.60,863.00L60.00,863.00Z" fill="rgb(187,222,251)" stroke="none"/>
+<path d="M60.00,785.00L245.60,785.00L245.60,863.00L60.00,863.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="152.80" y="800.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">RectangleShape</text>
+<path d="M60.00,815.00L245.60,815.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M60.00,821.00L245.60,821.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="104.00" y="833.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+outline()</text>
+<text x="111.20" y="851.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+clipPoint()</text>
+<path d="M295.60,785.00L460.40,785.00L460.40,863.00L295.60,863.00Z" fill="rgb(200,230,201)" stroke="none"/>
+<path d="M295.60,785.00L460.40,785.00L460.40,863.00L295.60,863.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="378.00" y="800.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">EllipseShape</text>
+<path d="M295.60,815.00L460.40,815.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M295.60,821.00L460.40,821.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="339.60" y="833.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+outline()</text>
+<text x="346.80" y="851.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+clipPoint()</text>
+<path d="M510.40,785.00L675.20,785.00L675.20,863.00L510.40,863.00Z" fill="rgb(255,224,178)" stroke="none"/>
+<path d="M510.40,785.00L675.20,785.00L675.20,863.00L510.40,863.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="592.80" y="800.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">DiamondShape</text>
+<path d="M510.40,815.00L675.20,815.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M510.40,821.00L675.20,821.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="554.40" y="833.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+outline()</text>
+<text x="561.60" y="851.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+clipPoint()</text>
+<path d="M725.20,785.00L885.20,785.00L885.20,863.00L725.20,863.00Z" fill="rgb(225,190,231)" stroke="none"/>
+<path d="M725.20,785.00L885.20,785.00L885.20,863.00L725.20,863.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="805.20" y="800.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">TextShape</text>
+<path d="M725.20,815.00L885.20,815.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M725.20,821.00L885.20,821.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="769.20" y="833.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+outline()</text>
+<text x="776.40" y="851.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+clipPoint()</text>
+<path d="M4353.85,758.00L4596.45,758.00L4596.45,890.00L4353.85,890.00Z" fill="rgb(255,249,196)" stroke="none"/>
+<path d="M4353.85,758.00L4596.45,758.00L4596.45,890.00L4353.85,890.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="4475.15" y="773.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">ClassShape</text>
+<path d="M4353.85,788.00L4596.45,788.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="4433.85" y="800.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+stereotype?: string</text>
+<text x="4419.45" y="818.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+fields: Field[]</text>
+<text x="4426.65" y="836.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+methods: Method[]</text>
+<path d="M4353.85,848.00L4596.45,848.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="4444.65" y="860.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+render(canvas, ox, oy)</text>
+<text x="4459.05" y="878.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+renderDetails(canvas, ...)</text>
+<path d="M5491.95,785.00L5703.35,785.00L5703.35,863.00L5491.95,863.00Z" fill="rgb(178,223,219)" stroke="none"/>
+<path d="M5491.95,785.00L5703.35,785.00L5703.35,863.00L5491.95,863.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="5597.65" y="800.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">C4PersonShape</text>
+<path d="M5491.95,815.00L5703.35,815.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M5491.95,821.00L5703.35,821.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="5582.75" y="833.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+render(canvas, ox, oy)</text>
+<text x="5557.55" y="851.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+renderDetails()</text>
+<path d="M5753.35,767.00L5964.75,767.00L5964.75,881.00L5753.35,881.00Z" fill="rgb(248,187,208)" stroke="none"/>
+<path d="M5753.35,767.00L5964.75,767.00L5964.75,881.00L5753.35,881.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="5859.05" y="782.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">C4BoxShape</text>
+<path d="M5753.35,797.00L5964.75,797.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="5833.35" y="809.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+technology?: string</text>
+<text x="5836.95" y="827.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+description?: string</text>
+<path d="M5753.35,839.00L5964.75,839.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="5844.15" y="851.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+render(canvas, ox, oy)</text>
+<text x="5818.95" y="869.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+renderDetails()</text>
+<path d="M5213.35,329.00L5409.15,329.00L5409.15,403.00L5213.35,403.00Z" fill="rgb(209,196,233)" stroke="none"/>
+<path d="M5213.35,329.00L5409.15,329.00L5409.15,403.00L5213.35,403.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="5311.25" y="359.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">Layout</text>
+<text x="5311.25" y="343.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">«interface»</text>
+<path d="M5213.35,373.00L5409.15,373.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M5213.35,379.00L5409.15,379.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="5296.95" y="391.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+apply(diagram): void</text>
+<path d="M5205.55,547.00L5416.95,547.00L5416.95,643.00L5205.55,643.00Z" fill="rgb(187,222,251)" stroke="none"/>
+<path d="M5205.55,547.00L5416.95,547.00L5416.95,643.00L5205.55,643.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="5311.25" y="562.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">Sugiyama</text>
+<path d="M5205.55,577.00L5416.95,577.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="5296.35" y="589.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+direction: TB|LR|BT|RL</text>
+<text x="5271.15" y="607.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+spacing: number</text>
+<path d="M5205.55,619.00L5416.95,619.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="5289.15" y="631.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+apply(diagram): void</text>
+<path d="M960.20,1184.00L1148.20,1184.00L1148.20,1330.00L960.20,1330.00Z" fill="rgb(200,230,201)" stroke="none"/>
+<path d="M960.20,1184.00L1148.20,1184.00L1148.20,1330.00L960.20,1330.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="1054.20" y="1214.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">Canvas</text>
+<text x="1054.20" y="1198.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">«interface»</text>
+<path d="M960.20,1228.00L1148.20,1228.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M960.20,1234.00L1148.20,1234.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="1007.80" y="1246.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+fillPath()</text>
+<text x="1015.00" y="1264.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+strokePath()</text>
+<text x="1040.20" y="1282.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+fillAndStrokePath()</text>
+<text x="1007.80" y="1300.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+drawText()</text>
+<text x="1018.60" y="1318.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+measureText()</text>
+<path d="M2155.68,991.00L2390.48,991.00L2390.48,1083.00L2155.68,1083.00Z" fill="rgb(255,224,178)" stroke="none"/>
+<path d="M2155.68,991.00L2390.48,991.00L2390.48,1083.00L2155.68,1083.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="2273.08" y="1021.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">RenderTarget</text>
+<text x="2273.08" y="1005.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">«interface»</text>
+<path d="M2155.68,1035.00L2390.48,1035.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M2155.68,1041.00L2390.48,1041.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="2235.68" y="1053.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+toPng(): Uint8Array</text>
+<text x="2257.28" y="1071.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+toImageData(): Uint8Array</text>
+<path d="M1274.20,998.00L1579.20,998.00L1579.20,1076.00L1274.20,1076.00Z" fill="rgb(225,190,231)" stroke="none"/>
+<path d="M1274.20,998.00L1579.20,998.00L1579.20,1076.00L1274.20,1076.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="1426.70" y="1013.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">CleanCanvas</text>
+<path d="M1274.20,1028.00L1579.20,1028.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="1336.20" y="1040.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">-target: Canvas</text>
+<path d="M1274.20,1052.00L1579.20,1052.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="1408.20" y="1064.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+fillAndStrokePath(→ fill + stroke)</text>
+<path d="M1629.20,980.00L1957.60,980.00L1957.60,1094.00L1629.20,1094.00Z" fill="rgb(255,249,196)" stroke="none"/>
+<path d="M1629.20,980.00L1957.60,980.00L1957.60,1094.00L1629.20,1094.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="1793.40" y="995.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">RoughCanvas</text>
+<path d="M1629.20,1010.00L1957.60,1010.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="1691.20" y="1022.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">-target: Canvas</text>
+<text x="1702.00" y="1040.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+roughness: number</text>
+<text x="1684.00" y="1058.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+seed: number</text>
+<path d="M1629.20,1070.00L1957.60,1070.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="1774.00" y="1082.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+fillAndStrokePath(→ hachure + wobble)</text>
+<path d="M1929.00,1227.00L2089.00,1227.00L2089.00,1287.00L1929.00,1287.00Z" fill="rgb(178,223,219)" stroke="none"/>
+<path d="M1929.00,1227.00L2089.00,1227.00L2089.00,1287.00L1929.00,1287.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="2009.00" y="1242.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">SvgTarget</text>
+<path d="M1929.00,1257.00L2089.00,1257.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M1929.00,1263.00L2089.00,1263.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="1994.60" y="1275.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+toSvg(): string</text>
+<path d="M2139.00,1227.00L2311.40,1227.00L2311.40,1287.00L2139.00,1287.00Z" fill="rgb(248,187,208)" stroke="none"/>
+<path d="M2139.00,1227.00L2311.40,1227.00L2311.40,1287.00L2139.00,1287.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="2225.20" y="1242.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">WasmTarget</text>
+<path d="M2139.00,1257.00L2311.40,1257.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="2211.80" y="1269.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">-inner: RustCanvas</text>
+<path d="M2139.00,1281.00L2311.40,1281.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M6039.75,320.00L6290.15,320.00L6290.15,412.00L6039.75,412.00Z" fill="rgb(209,196,233)" stroke="none"/>
+<path d="M6039.75,320.00L6290.15,320.00L6290.15,412.00L6039.75,412.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="6164.95" y="350.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">Theme</text>
+<text x="6164.95" y="334.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">«interface»</text>
+<path d="M6039.75,364.00L6290.15,364.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="6094.55" y="376.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+name: string</text>
+<text x="6148.55" y="394.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+shape: Record&lt;type, colors&gt;</text>
+<path d="M6039.75,406.00L6290.15,406.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M3966.05,60.00L4278.85,60.00L4278.85,210.00L3966.05,210.00Z" fill="rgb(187,222,251)" stroke="none"/>
+<path d="M3966.05,60.00L4278.85,60.00L4278.85,210.00L3966.05,210.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="4122.45" y="75.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">Diagram</text>
+<path d="M3966.05,90.00L4278.85,90.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="4067.65" y="102.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">-children: (Shape|Group)[]</text>
+<text x="4067.65" y="120.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">-connections: Connection[]</text>
+<text x="4028.05" y="138.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">-layout: Layout</text>
+<path d="M3966.05,150.00L4278.85,150.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="4035.25" y="162.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+add(shape: T): T</text>
+<text x="4046.05" y="180.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+group(label): Group</text>
+<text x="4103.65" y="198.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+render(engine, factory): Uint8Array</text>
+<path d="M2793.20,311.00L3121.60,311.00L3121.60,421.00L2793.20,421.00Z" fill="rgb(200,230,201)" stroke="none"/>
+<path d="M2793.20,311.00L3121.60,311.00L3121.60,421.00L2793.20,421.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="2957.40" y="341.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">Node</text>
+<text x="2957.40" y="325.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">«interface»</text>
+<path d="M2793.20,355.00L3121.60,355.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="2840.80" y="367.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+id: string</text>
+<text x="2851.60" y="385.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+label: string</text>
+<path d="M2793.20,397.00L3121.60,397.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="2938.00" y="409.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+to(target, label?, opts?): Connection</text>
+<path d="M3292.08,522.00L3542.48,522.00L3542.48,668.00L3292.08,668.00Z" fill="rgb(255,224,178)" stroke="none"/>
+<path d="M3292.08,522.00L3542.48,522.00L3542.48,668.00L3292.08,668.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="3417.28" y="552.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">Shape</text>
+<text x="3417.28" y="536.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">«abstract»</text>
+<path d="M3292.08,566.00L3542.48,566.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="3372.08" y="578.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+x, y, width, height</text>
+<text x="3361.28" y="596.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+color, fillColor</text>
+<path d="M3292.08,608.00L3542.48,608.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="3400.88" y="620.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+outline(w, h): Float64Array</text>
+<text x="3382.88" y="638.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+clipPoint(w, h, angle)</text>
+<text x="3382.88" y="656.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+render(canvas, ox, oy)</text>
+<path d="M2386.40,538.00L2621.20,538.00L2621.20,652.00L2386.40,652.00Z" fill="rgb(225,190,231)" stroke="none"/>
+<path d="M2386.40,538.00L2621.20,538.00L2621.20,652.00L2386.40,652.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="2503.80" y="553.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">Group</text>
+<path d="M2386.40,568.00L2621.20,568.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="2488.00" y="580.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+children: (Shape|Group)[]</text>
+<text x="2462.80" y="598.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+fillColor?: string</text>
+<path d="M2386.40,610.00L2621.20,610.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="2455.60" y="622.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+add(shape: T): T</text>
+<text x="2477.20" y="640.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+render(canvas, ox, oy)</text>
+<path d="M4671.45,300.00L4882.85,300.00L4882.85,432.00L4671.45,432.00Z" fill="rgb(255,249,196)" stroke="none"/>
+<path d="M4671.45,300.00L4882.85,300.00L4882.85,432.00L4671.45,432.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="4777.15" y="315.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">Connection</text>
+<path d="M4671.45,330.00L4882.85,330.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="4747.85" y="342.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+from, target: Node</text>
+<text x="4755.05" y="360.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+type: ConnectionType</text>
+<text x="4733.45" y="378.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+label?: string</text>
+<text x="4747.85" y="396.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+waypoints: Point[]</text>
+<path d="M4671.45,408.00L4882.85,408.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="4762.25" y="420.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+render(canvas, offset)</text>
+<path d="M4926.95,760.00L5130.55,760.00L5130.55,888.00L4926.95,888.00Z" fill="rgb(178,223,219)" stroke="none"/>
+<path d="M4926.95,760.00L5130.55,760.00L5130.55,888.00L4926.95,888.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="5028.75" y="790.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">PathBuilder</text>
+<text x="5028.75" y="774.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">«interface»</text>
+<path d="M4926.95,804.00L5130.55,804.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M4926.95,810.00L5130.55,810.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="5003.35" y="822.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+moveTo(x, y): this</text>
+<text x="5003.35" y="840.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+lineTo(x, y): this</text>
+<text x="4985.35" y="858.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+close(): this</text>
+<text x="5014.15" y="876.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+build(): Float64Array</text>
+<path d="M3292.08,595.00L3206.84,595.00L3206.84,366.00L3121.60,366.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round" stroke-dasharray="6 6"/>
+<path d="M3121.60,366.00L3110.55,370.67L3110.55,361.33Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M3121.60,366.00L3110.55,370.67L3110.55,361.33Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M2621.20,595.00L2707.20,595.00L2707.20,366.00L2793.20,366.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round" stroke-dasharray="6 6"/>
+<path d="M2793.20,366.00L2804.25,361.33L2804.25,370.67Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M2793.20,366.00L2804.25,361.33L2804.25,370.67Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M3966.05,135.00L3543.83,135.00L3543.83,366.00L3121.60,366.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M3966.05,135.00L3974.05,138.60L3982.05,135.00L3974.05,131.40Z" fill="rgb(51,51,51)" stroke="none"/>
+<path d="M3966.05,135.00L3974.05,138.60L3982.05,135.00L3974.05,131.40Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M4278.85,135.00L4475.15,135.00L4475.15,366.00L4671.45,366.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M4278.85,135.00L4270.85,131.40L4262.85,135.00L4270.85,138.60Z" fill="rgb(51,51,51)" stroke="none"/>
+<path d="M4278.85,135.00L4270.85,131.40L4262.85,135.00L4270.85,138.60Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M4278.85,135.00L4746.10,135.00L4746.10,366.00L5213.35,366.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M4278.85,135.00L4270.85,131.40L4262.85,135.00L4270.85,138.60Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M4278.85,135.00L4270.85,131.40L4262.85,135.00L4270.85,138.60Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M4278.85,135.00L5159.30,135.00L5159.30,366.00L6039.75,366.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round" stroke-dasharray="6 6"/>
+<path d="M6051.02,361.89L6039.75,366.00L6051.02,370.11" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M245.60,824.00L1768.84,824.00L1768.84,595.00L3292.08,595.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M3292.08,595.00L3303.13,590.33L3303.13,599.67Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M3292.08,595.00L3303.13,590.33L3303.13,599.67Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M460.40,824.00L1876.24,824.00L1876.24,595.00L3292.08,595.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M3292.08,595.00L3303.13,590.33L3303.13,599.67Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M3292.08,595.00L3303.13,590.33L3303.13,599.67Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M675.20,824.00L1983.64,824.00L1983.64,595.00L3292.08,595.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M3292.08,595.00L3303.13,590.33L3303.13,599.67Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M3292.08,595.00L3303.13,590.33L3303.13,599.67Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M885.20,824.00L2088.64,824.00L2088.64,595.00L3292.08,595.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M3292.08,595.00L3303.13,590.33L3303.13,599.67Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M3292.08,595.00L3303.13,590.33L3303.13,599.67Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M4353.85,824.00L3948.16,824.00L3948.16,595.00L3542.48,595.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M3542.48,595.00L3531.42,599.67L3531.42,590.33Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M3542.48,595.00L3531.42,599.67L3531.42,590.33Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M5491.95,824.00L4517.21,824.00L4517.21,595.00L3542.48,595.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M3542.48,595.00L3531.42,599.67L3531.42,590.33Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M3542.48,595.00L3531.42,599.67L3531.42,590.33Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M5753.35,824.00L4647.91,824.00L4647.91,595.00L3542.48,595.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M3542.48,595.00L3531.42,599.67L3531.42,590.33Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M3542.48,595.00L3531.42,599.67L3531.42,590.33Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M5311.25,547.00L5311.25,403.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round" stroke-dasharray="6 6"/>
+<path d="M5311.25,403.00L5306.58,391.95L5315.92,391.95Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M5311.25,403.00L5306.58,391.95L5315.92,391.95Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M2155.68,1037.00L1651.94,1037.00L1651.94,1257.00L1148.20,1257.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M1148.20,1257.00L1137.15,1261.67L1137.15,1252.33Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M1148.20,1257.00L1137.15,1261.67L1137.15,1252.33Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M1274.20,1037.00L1211.20,1037.00L1211.20,1257.00L1148.20,1257.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round" stroke-dasharray="6 6"/>
+<path d="M1148.20,1257.00L1137.15,1261.67L1137.15,1252.33Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M1148.20,1257.00L1137.15,1261.67L1137.15,1252.33Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M1629.20,1037.00L1388.70,1037.00L1388.70,1257.00L1148.20,1257.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round" stroke-dasharray="6 6"/>
+<path d="M1148.20,1257.00L1137.15,1261.67L1137.15,1252.33Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M1148.20,1257.00L1137.15,1261.67L1137.15,1252.33Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M2089.00,1257.00L2122.34,1257.00L2122.34,1037.00L2155.68,1037.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round" stroke-dasharray="6 6"/>
+<path d="M2155.68,1037.00L2166.73,1032.33L2166.73,1041.67Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M2155.68,1037.00L2166.73,1032.33L2166.73,1041.67Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M2225.20,1227.00L2225.20,1155.00L2273.08,1155.00L2273.08,1083.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round" stroke-dasharray="6 6"/>
+<path d="M2273.08,1083.00L2268.40,1071.95L2277.75,1071.95Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M2273.08,1083.00L2268.40,1071.95L2277.75,1071.95Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M1274.20,1037.00L1211.20,1037.00L1211.20,1257.00L1148.20,1257.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M1274.20,1037.00L1282.20,1040.60L1290.20,1037.00L1282.20,1033.40Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M1274.20,1037.00L1282.20,1040.60L1290.20,1037.00L1282.20,1033.40Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M1190.20,1128.00L1232.20,1128.00L1232.20,1146.00L1190.20,1146.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="1211.20" y="1139.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">wraps</text>
+<path d="M1629.20,1037.00L1388.70,1037.00L1388.70,1257.00L1148.20,1257.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M1629.20,1037.00L1637.20,1040.60L1645.20,1037.00L1637.20,1033.40Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M1629.20,1037.00L1637.20,1040.60L1645.20,1037.00L1637.20,1033.40Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M1367.70,1128.00L1409.70,1128.00L1409.70,1146.00L1367.70,1146.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="1388.70" y="1139.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">wraps</text>
+<path d="M3292.08,595.00L2713.38,595.00L2713.38,824.00L2134.68,824.00L2302.08,824.00L2302.08,1037.00L2469.48,1037.00L1808.84,1037.00L1808.84,1257.00L1148.20,1257.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round" stroke-dasharray="6 6"/>
+<path d="M1136.93,1261.11L1148.20,1257.00L1136.93,1252.89" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M2386.40,595.00L2231.54,595.00L2231.54,824.00L2076.68,824.00L2076.68,1037.00L1612.44,1037.00L1612.44,1257.00L1148.20,1257.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round" stroke-dasharray="6 6"/>
+<path d="M1136.93,1261.11L1148.20,1257.00L1136.93,1252.89" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M4671.45,366.00L3942.26,366.00L3942.26,595.00L3213.08,595.00L3190.48,595.00L3190.48,824.00L3167.88,824.00L2847.68,824.00L2847.68,1037.00L2527.48,1037.00L1837.84,1037.00L1837.84,1257.00L1148.20,1257.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round" stroke-dasharray="6 6"/>
+<path d="M1136.93,1261.11L1148.20,1257.00L1136.93,1252.89" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M3542.48,595.00L4234.71,595.00L4234.71,824.00L4926.95,824.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round" stroke-dasharray="6 6"/>
+<path d="M4938.22,819.89L4926.95,824.00L4938.22,828.11" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M4777.15,432.00L4777.15,513.50L3716.28,513.50L3716.28,595.00L3716.28,677.50L5028.75,677.50L5028.75,760.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round" stroke-dasharray="6 6"/>
+<path d="M5032.86,771.27L5028.75,760.00L5024.64,771.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+</svg>

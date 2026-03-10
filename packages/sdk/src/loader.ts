@@ -26,8 +26,11 @@ export async function resolve(
     // Map known exports
     const exportMap: Record<string, string> = {
       'shapes/basic': 'dist/shapes/basic.js',
+      'shapes/uml': 'dist/shapes/uml.js',
+      'shapes/c4': 'dist/shapes/c4.js',
       'engines': 'dist/engines/index.js',
       'layout': 'dist/layout/index.js',
+      'themes': 'dist/themes/index.js',
       'wasm-canvas': 'dist/wasm-canvas.js',
     }
     const mapped = exportMap[subpath]

@@ -3,7 +3,15 @@ export const LINE_TO = 1
 export const CUBIC_TO = 2
 export const CLOSE = 3
 
-export class PathBuilder {
+export interface PathBuilder {
+  moveTo(x: number, y: number): PathBuilder
+  lineTo(x: number, y: number): PathBuilder
+  cubicTo(x1: number, y1: number, x2: number, y2: number, x: number, y: number): PathBuilder
+  close(): PathBuilder
+  build(): Float64Array
+}
+
+export class DefaultPathBuilder implements PathBuilder {
   private cmds: number[] = []
 
   moveTo(x: number, y: number): this {

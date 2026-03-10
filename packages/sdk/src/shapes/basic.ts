@@ -1,5 +1,5 @@
 import { Shape, type ShapeOpts } from '../core/shape.js'
-import { PathBuilder } from '../core/path.js'
+import { DefaultPathBuilder } from '../core/path.js'
 
 const KAPPA = 0.5522847498
 
@@ -11,7 +11,7 @@ class RectangleShape extends Shape {
   }
 
   outline(w: number, h: number): Float64Array {
-    return new PathBuilder()
+    return new DefaultPathBuilder()
       .moveTo(0, 0).lineTo(w, 0).lineTo(w, h).lineTo(0, h)
       .close().build()
   }
@@ -59,7 +59,7 @@ class EllipseShape extends Shape {
     const rx = w / 2, ry = h / 2
     const cx = rx, cy = ry
     const kx = KAPPA * rx, ky = KAPPA * ry
-    return new PathBuilder()
+    return new DefaultPathBuilder()
       .moveTo(cx + rx, cy)
       .cubicTo(cx + rx, cy + ky, cx + kx, cy + ry, cx, cy + ry)
       .cubicTo(cx - kx, cy + ry, cx - rx, cy + ky, cx - rx, cy)
@@ -86,7 +86,7 @@ class DiamondShape extends Shape {
   }
 
   outline(w: number, h: number): Float64Array {
-    return new PathBuilder()
+    return new DefaultPathBuilder()
       .moveTo(w / 2, 0).lineTo(w, h / 2).lineTo(w / 2, h).lineTo(0, h / 2)
       .close().build()
   }

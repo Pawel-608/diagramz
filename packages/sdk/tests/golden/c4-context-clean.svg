@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="791" height="730" viewBox="0 0 791 730">
+<rect width="791" height="730" fill="#fff"/>
+<path d="M50.00,548.00L483.60,548.00C489.12,548.00 493.60,552.48 493.60,558.00L493.60,680.00C493.60,685.52 489.12,690.00 483.60,690.00L50.00,690.00C44.48,690.00 40.00,685.52 40.00,680.00L40.00,558.00C40.00,552.48 44.48,548.00 50.00,548.00Z" fill="rgb(8,66,123)" stroke="none"/>
+<path d="M50.00,548.00L483.60,548.00C489.12,548.00 493.60,552.48 493.60,558.00L493.60,680.00C493.60,685.52 489.12,690.00 483.60,690.00L50.00,690.00C44.48,690.00 40.00,685.52 40.00,680.00L40.00,558.00C40.00,552.48 44.48,548.00 50.00,548.00Z" fill="none" stroke="rgb(255,255,255)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="266.80" y="614.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">Customer</text>
+<path d="M278.80,570.00C278.80,576.63 273.43,582.00 266.80,582.00C260.17,582.00 254.80,576.63 254.80,570.00C254.80,563.37 260.17,558.00 266.80,558.00C273.43,558.00 278.80,563.37 278.80,570.00Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M242.80,599.00C242.80,591.27 253.55,585.00 266.80,585.00C280.05,585.00 290.80,591.27 290.80,599.00Z" fill="rgb(255,255,255)" stroke="none"/>
+<text x="266.80" y="636.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">A customer of the bank,</text>
+<text x="266.80" y="652.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">with personal bank accounts.</text>
+<text x="266.80" y="678.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="10.0" text-anchor="middle" dominant-baseline="central">[Person]</text>
+<path d="M306.45,40.00L565.65,40.00C571.17,40.00 575.65,44.48 575.65,50.00L575.65,172.00C575.65,177.52 571.17,182.00 565.65,182.00L306.45,182.00C300.93,182.00 296.45,177.52 296.45,172.00L296.45,50.00C296.45,44.48 300.93,40.00 306.45,40.00Z" fill="rgb(17,104,189)" stroke="none"/>
+<path d="M306.45,40.00L565.65,40.00C571.17,40.00 575.65,44.48 575.65,50.00L575.65,172.00C575.65,177.52 571.17,182.00 565.65,182.00L306.45,182.00C300.93,182.00 296.45,177.52 296.45,172.00L296.45,50.00C296.45,44.48 300.93,40.00 306.45,40.00Z" fill="none" stroke="rgb(255,255,255)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="436.05" y="68.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">Internet Banking System</text>
+<text x="436.05" y="90.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Allows customers to view</text>
+<text x="436.05" y="106.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">bank account information</text>
+<text x="436.05" y="122.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">and make payments.</text>
+<text x="436.05" y="170.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="10.0" text-anchor="middle" dominant-baseline="central">[Software System]</text>
+<path d="M163.10,302.00L370.50,302.00C376.02,302.00 380.50,306.48 380.50,312.00L380.50,418.00C380.50,423.52 376.02,428.00 370.50,428.00L163.10,428.00C157.58,428.00 153.10,423.52 153.10,418.00L153.10,312.00C153.10,306.48 157.58,302.00 163.10,302.00Z" fill="rgb(67,141,213)" stroke="none"/>
+<path d="M163.10,302.00L370.50,302.00C376.02,302.00 380.50,306.48 380.50,312.00L380.50,418.00C380.50,423.52 376.02,428.00 370.50,428.00L163.10,428.00C157.58,428.00 153.10,423.52 153.10,418.00L153.10,312.00C153.10,306.48 157.58,302.00 163.10,302.00Z" fill="none" stroke="rgb(255,255,255)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="266.80" y="330.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">E-Mail System</text>
+<text x="266.80" y="352.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">The internal Microsoft</text>
+<text x="266.80" y="368.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Exchange e-mail system.</text>
+<text x="266.80" y="416.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="10.0" text-anchor="middle" dominant-baseline="central">[External Software System]</text>
+<path d="M470.50,302.00L740.10,302.00C745.62,302.00 750.10,306.48 750.10,312.00L750.10,418.00C750.10,423.52 745.62,428.00 740.10,428.00L470.50,428.00C464.98,428.00 460.50,423.52 460.50,418.00L460.50,312.00C460.50,306.48 464.98,302.00 470.50,302.00Z" fill="rgb(133,187,240)" stroke="none"/>
+<path d="M470.50,302.00L740.10,302.00C745.62,302.00 750.10,306.48 750.10,312.00L750.10,418.00C750.10,423.52 745.62,428.00 740.10,428.00L470.50,428.00C464.98,428.00 460.50,423.52 460.50,418.00L460.50,312.00C460.50,306.48 464.98,302.00 470.50,302.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="605.30" y="330.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">Mainframe Banking System</text>
+<text x="605.30" y="352.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Stores all of the core</text>
+<text x="605.30" y="368.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">banking information.</text>
+<text x="605.30" y="416.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="10.0" text-anchor="middle" dominant-baseline="central">[External Software System]</text>
+<path d="M266.80,548.00L266.80,365.00L436.05,365.00L436.05,182.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M431.94,170.73L436.05,182.00L440.16,170.73" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M334.03,346.00L368.82,346.00L368.82,364.00L334.03,364.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="351.43" y="357.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Uses</text>
+<path d="M436.05,182.00L436.05,242.00L266.80,242.00L266.80,302.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M270.91,313.27L266.80,302.00L262.69,313.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M280.03,223.00L422.82,223.00L422.82,241.00L280.03,241.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="351.43" y="234.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Sends e-mails using</text>
+<path d="M436.05,182.00L436.05,242.00L605.30,242.00L605.30,302.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M609.41,313.27L605.30,302.00L601.19,313.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M438.47,223.00L602.88,223.00L602.88,241.00L438.47,241.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="520.67" y="234.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Gets account info from</text>
+<path d="M266.80,428.00L266.80,548.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M270.91,559.27L266.80,548.00L262.69,559.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M206.20,469.00L327.40,469.00L327.40,487.00L206.20,487.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="266.80" y="480.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Sends e-mails to</text>
+</svg>

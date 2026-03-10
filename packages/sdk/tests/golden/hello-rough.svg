@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="963" height="560" viewBox="0 0 963 560">
+<rect width="963" height="560" fill="#fff"/>
+<path d="M538.40,40.00L922.40,40.00L922.40,140.00L538.40,140.00Z" fill="rgb(252,228,236)" stroke="none"/>
+<path d="M538.32,40.72L920.93,39.73L921.20,140.72L538.55,138.84Z" fill="none" stroke="rgb(204,204,204)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M537.00,39.34L922.40,41.03L921.44,140.52L538.31,141.39Z" fill="none" stroke="rgb(204,204,204)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="546.40" y="56.00" fill="rgb(102,102,102)" font-family="&quot;Architects Daughter&quot;, cursive" font-size="12.0" text-anchor="middle" dominant-baseline="central">Frontend</text>
+<path d="M40.00,220.00L458.40,220.00L458.40,520.00L40.00,520.00Z" fill="rgb(227,242,253)" stroke="none"/>
+<path d="M40.67,220.46L458.00,218.69L458.20,519.13L38.92,520.41Z" fill="none" stroke="rgb(204,204,204)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M39.28,219.74L457.40,220.78L458.48,520.01L41.08,519.56Z" fill="none" stroke="rgb(204,204,204)" stroke-width="1.00" stroke-linecap="round"/>
+<text x="48.00" y="236.00" fill="rgb(102,102,102)" font-family="&quot;Architects Daughter&quot;, cursive" font-size="12.0" text-anchor="middle" dominant-baseline="central">Backend</text>
+<path d="M174.77,299.52L175.83,299.60" fill="none" stroke="rgba(187,222,251,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M175.03,288.23L187.11,299.92" fill="none" stroke="rgba(187,222,251,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M175.02,276.87L197.99,300.24" fill="none" stroke="rgba(187,222,251,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M174.47,264.94L209.97,299.85" fill="none" stroke="rgba(187,222,251,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M174.28,254.04L220.97,299.54" fill="none" stroke="rgba(187,222,251,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M175.00,242.44L232.28,299.55" fill="none" stroke="rgba(187,222,251,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M183.70,239.59L243.62,299.76" fill="none" stroke="rgba(187,222,251,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M194.86,240.32L254.54,299.72" fill="none" stroke="rgba(187,222,251,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M206.15,240.37L265.58,299.56" fill="none" stroke="rgba(187,222,251,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M217.87,240.11L277.78,300.28" fill="none" stroke="rgba(187,222,251,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M228.53,240.43L288.65,300.48" fill="none" stroke="rgba(187,222,251,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M240.33,239.79L300.30,299.99" fill="none" stroke="rgba(187,222,251,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M251.09,239.66L310.89,299.60" fill="none" stroke="rgba(187,222,251,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M262.97,239.63L318.99,296.15" fill="none" stroke="rgba(187,222,251,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M274.00,240.05L318.92,285.04" fill="none" stroke="rgba(187,222,251,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M285.62,240.36L318.81,272.89" fill="none" stroke="rgba(187,222,251,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M296.39,240.00L318.98,262.53" fill="none" stroke="rgba(187,222,251,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M308.06,240.06L318.10,250.92" fill="none" stroke="rgba(187,222,251,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M174.07,238.99L318.87,239.79L318.57,300.14L173.11,299.19Z" fill="none" stroke="rgb(21,101,192)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M173.57,241.40L319.97,240.29L320.02,299.82L173.87,301.20Z" fill="none" stroke="rgb(21,101,192)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="246.60" y="270.00" fill="rgb(21,101,192)" font-family="&quot;Architects Daughter&quot;, cursive" font-size="16.0" text-anchor="middle" dominant-baseline="central">API Server</text>
+<path d="M62.29,458.30L69.42,465.17" fill="none" stroke="rgba(200,230,201,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M69.38,454.41L94.13,478.70" fill="none" stroke="rgba(200,230,201,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M76.75,450.93L120.36,493.69" fill="none" stroke="rgba(200,230,201,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M83.94,446.30L136.24,497.84" fill="none" stroke="rgba(200,230,201,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M91.19,442.52L143.30,493.60" fill="none" stroke="rgba(200,230,201,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M99.38,438.46L150.44,489.46" fill="none" stroke="rgba(200,230,201,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M105.88,434.10L157.20,485.38" fill="none" stroke="rgba(200,230,201,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M113.67,429.94L164.51,482.13" fill="none" stroke="rgba(200,230,201,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M120.72,426.39L172.28,478.04" fill="none" stroke="rgba(200,230,201,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M128.04,422.36L179.45,473.33" fill="none" stroke="rgba(200,230,201,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M143.49,426.29L186.29,470.06" fill="none" stroke="rgba(200,230,201,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M169.33,440.12L193.92,465.21" fill="none" stroke="rgba(200,230,201,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M194.75,454.53L201.02,461.97" fill="none" stroke="rgba(200,230,201,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M203.72,459.95C203.59,482.70 172.56,499.20 132.04,500.29C93.64,500.30 60.33,482.66 59.10,459.39C58.73,436.84 91.87,419.97 132.34,419.50C172.31,421.01 204.48,438.82 203.23,458.87Z" fill="none" stroke="rgb(46,125,50)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M203.06,460.41C205.37,481.33 170.27,499.17 132.93,500.82C91.34,498.51 60.34,483.57 61.22,459.04C60.16,438.12 93.68,421.37 131.98,420.73C172.93,419.52 203.65,437.04 203.32,461.46Z" fill="none" stroke="rgb(46,125,50)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="132.00" y="460.00" fill="rgb(46,125,50)" font-family="&quot;Architects Daughter&quot;, cursive" font-size="16.0" text-anchor="middle" dominant-baseline="central">PostgreSQL</text>
+<path d="M291.35,456.41L306.46,471.33" fill="none" stroke="rgba(255,224,178,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M298.55,452.70L330.28,483.82" fill="none" stroke="rgba(255,224,178,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M305.85,448.60L353.19,495.54" fill="none" stroke="rgba(255,224,178,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M313.68,444.80L366.46,496.95" fill="none" stroke="rgba(255,224,178,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M320.93,441.12L373.33,493.39" fill="none" stroke="rgba(255,224,178,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M328.66,436.94L380.84,489.44" fill="none" stroke="rgba(255,224,178,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M335.89,433.20L389.01,485.95" fill="none" stroke="rgba(255,224,178,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M343.69,429.46L395.59,481.98" fill="none" stroke="rgba(255,224,178,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M350.62,425.78L403.71,477.85" fill="none" stroke="rgba(255,224,178,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M357.81,421.58L411.29,473.98" fill="none" stroke="rgba(255,224,178,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M375.31,426.99L418.53,470.70" fill="none" stroke="rgba(255,224,178,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M398.48,439.45L425.99,466.55" fill="none" stroke="rgba(255,224,178,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M422.04,451.86L433.51,462.98" fill="none" stroke="rgba(255,224,178,0.702)" stroke-width="1.00" stroke-linecap="round"/>
+<path d="M361.57,418.81L438.02,461.10L361.87,499.60L284.49,459.68Z" fill="none" stroke="rgb(230,81,0)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M362.57,419.46L438.90,458.58L361.69,501.11L282.55,459.49Z" fill="none" stroke="rgb(230,81,0)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="361.20" y="460.00" fill="rgb(230,81,0)" font-family="&quot;Architects Daughter&quot;, cursive" font-size="16.0" text-anchor="middle" dominant-baseline="central">Redis Cache</text>
+<path d="M558.47,60.34L679.13,61.41L679.09,119.95L557.78,118.54Z" fill="none" stroke="rgb(173,20,87)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M558.20,60.79L678.27,61.45L677.84,119.32L558.02,120.35Z" fill="none" stroke="rgb(173,20,87)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="618.40" y="90.00" fill="rgb(173,20,87)" font-family="&quot;Architects Daughter&quot;, cursive" font-size="16.0" text-anchor="middle" dominant-baseline="central">Web App</text>
+<path d="M759.20,61.42L901.52,61.21L902.52,120.92L759.10,119.72Z" fill="none" stroke="rgb(173,20,87)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M757.70,58.63L902.18,59.85L903.26,121.18L757.61,118.87Z" fill="none" stroke="rgb(173,20,87)" stroke-width="2.00" stroke-linecap="round"/>
+<text x="830.40" y="90.00" fill="rgb(173,20,87)" font-family="&quot;Architects Daughter&quot;, cursive" font-size="16.0" text-anchor="middle" dominant-baseline="central">Mobile App</text>
+<path d="M558.91,90.59L439.10,90.63L439.50,269.88L318.76,270.08" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M558.92,88.54L438.48,90.68L438.88,270.22L317.79,268.70" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M307.37,272.64L318.68,269.18L307.86,266.06" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M306.85,274.56L317.62,269.44L308.09,265.80" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M406.70,161.00L470.30,161.00L470.30,179.00L406.70,179.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="438.50" y="172.00" fill="rgb(0,0,0)" font-family="&quot;Architects Daughter&quot;, cursive" font-size="12.0" text-anchor="middle" dominant-baseline="central">REST API</text>
+<path d="M757.13,89.22L539.44,90.19L537.60,271.48L320.06,269.15" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M757.35,89.54L538.01,90.01L537.56,269.97L317.46,270.98" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M307.96,275.59L319.85,270.72L308.35,266.47" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M305.83,274.08L320.00,269.47L306.00,265.58" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M510.30,161.00L566.70,161.00L566.70,179.00L510.30,179.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="538.50" y="172.00" fill="rgb(0,0,0)" font-family="&quot;Architects Daughter&quot;, cursive" font-size="12.0" text-anchor="middle" dominant-baseline="central">GraphQL</text>
+<path d="M247.16,298.87L247.88,360.17L130.61,359.26L132.15,421.12" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M246.33,299.27L247.30,358.59L130.79,359.59L133.24,419.56" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M137.04,432.63L132.20,418.94L126.82,432.43" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M135.93,431.27L131.60,418.63L127.04,430.13" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M161.10,341.00L217.50,341.00L217.50,359.00L161.10,359.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="189.30" y="352.00" fill="rgb(0,0,0)" font-family="&quot;Architects Daughter&quot;, cursive" font-size="12.0" text-anchor="middle" dominant-baseline="central">queries</text>
+<path d="M246.29,301.03L247.66,359.15L361.12,361.50L360.07,421.38" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M246.05,299.42L247.03,360.18L360.47,360.80L362.63,419.91" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M364.53,432.07L362.59,420.85L355.67,431.85" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M366.73,430.77L361.67,420.41L356.17,431.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M275.70,341.00L332.10,341.00L332.10,359.00L275.70,359.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="303.90" y="352.00" fill="rgb(0,0,0)" font-family="&quot;Architects Daughter&quot;, cursive" font-size="12.0" text-anchor="middle" dominant-baseline="central">get/set</text>
+</svg>

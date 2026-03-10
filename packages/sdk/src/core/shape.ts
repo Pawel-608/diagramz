@@ -1,6 +1,9 @@
 import type { Node, ConnectionRegistrar } from './node.js'
+import type { Canvas } from '../engines/canvas.js'
 import { Connection, type ConnectionOpts } from './connection.js'
 import { generateId } from './id.js'
+import { translatePath } from './path.js'
+import { parseColor } from './color.js'
 
 export interface ShapeOpts {
   id?: string
@@ -53,6 +56,21 @@ export abstract class Shape implements Node {
     const register = this._register ?? (target as Shape)._register
     register?.(conn)
     return conn
+  }
+
+  render(canvas: Canvas, offsetX: number, offsetY: number): void {
+    const [w, h] = resolveSize(this)
+    const x = (this.x ?? 0) + offsetX
+    const y = (this.y ?? 0) + offsetY
+    const outline = this.outline(w, h)
+
+    if (outline.length > 0) {
+      const worldPath = translatePath(outline, x, y)
+      canvas.fillAndStrokePath(worldPath, parseColor(this.fillColor ?? '#ffffff'), parseColor(this.color ?? '#000000'), this.strokeWidth ?? 2)
+    }
+
+    const [lx, ly] = this.labelPos(w, h)
+    canvas.drawText(this.label, x + lx, y + ly, this.fontSize ?? 16, parseColor(this.color ?? '#000000'), 0)
   }
 
   toJSON(): unknown {
