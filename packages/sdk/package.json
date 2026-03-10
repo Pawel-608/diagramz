@@ -1,6 +1,6 @@
 {
   "name": "diagramz",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Diagrams as code — build, render, and share diagrams from JavaScript",
   "type": "module",
   "main": "dist/index.js",
