@@ -6,6 +6,22 @@
 <path d="M40.00,220.00L458.40,220.00L458.40,520.00L40.00,520.00Z" fill="rgb(227,242,253)" stroke="none"/>
 <path d="M40.00,220.00L458.40,220.00L458.40,520.00L40.00,520.00Z" fill="none" stroke="rgb(204,204,204)" stroke-width="1.00" stroke-linecap="round"/>
 <text x="48.00" y="236.00" fill="rgb(102,102,102)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Backend</text>
+<path d="M618.40,120.00L618.40,180.00L196.20,180.00L196.20,240.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M200.31,251.27L196.20,240.00L192.09,251.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M375.50,161.00L439.10,161.00L439.10,179.00L375.50,179.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="407.30" y="172.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">REST API</text>
+<path d="M830.40,120.00L830.40,180.00L297.00,180.00L297.00,240.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M301.11,251.27L297.00,240.00L292.89,251.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M535.50,161.00L591.90,161.00L591.90,179.00L535.50,179.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="563.70" y="172.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">GraphQL</text>
+<path d="M196.20,300.00L196.20,360.00L132.00,360.00L132.00,420.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M136.11,431.27L132.00,420.00L127.89,431.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M135.90,341.00L192.30,341.00L192.30,359.00L135.90,359.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="164.10" y="352.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">queries</text>
+<path d="M297.00,300.00L297.00,360.00L361.20,360.00L361.20,420.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M365.31,431.27L361.20,420.00L357.09,431.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M300.90,341.00L357.30,341.00L357.30,359.00L300.90,359.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="329.10" y="352.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">get/set</text>
 <path d="M174.60,240.00L318.60,240.00L318.60,300.00L174.60,300.00Z" fill="rgb(187,222,251)" stroke="none"/>
 <path d="M174.60,240.00L318.60,240.00L318.60,300.00L174.60,300.00Z" fill="none" stroke="rgb(21,101,192)" stroke-width="2.00" stroke-linecap="round"/>
 <text x="246.60" y="270.00" fill="rgb(21,101,192)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">API Server</text>
@@ -21,20 +37,4 @@
 <path d="M758.40,60.00L902.40,60.00L902.40,120.00L758.40,120.00Z" fill="rgb(248,187,208)" stroke="none"/>
 <path d="M758.40,60.00L902.40,60.00L902.40,120.00L758.40,120.00Z" fill="none" stroke="rgb(173,20,87)" stroke-width="2.00" stroke-linecap="round"/>
 <text x="830.40" y="90.00" fill="rgb(173,20,87)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">Mobile App</text>
-<path d="M558.40,90.00L438.50,90.00L438.50,270.00L318.60,270.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M307.33,274.11L318.60,270.00L307.33,265.89" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
-<path d="M406.70,161.00L470.30,161.00L470.30,179.00L406.70,179.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
-<text x="438.50" y="172.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">REST API</text>
-<path d="M758.40,90.00L538.50,90.00L538.50,270.00L318.60,270.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M307.33,274.11L318.60,270.00L307.33,265.89" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
-<path d="M510.30,161.00L566.70,161.00L566.70,179.00L510.30,179.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
-<text x="538.50" y="172.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">GraphQL</text>
-<path d="M246.60,300.00L246.60,360.00L132.00,360.00L132.00,420.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M136.11,431.27L132.00,420.00L127.89,431.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
-<path d="M161.10,341.00L217.50,341.00L217.50,359.00L161.10,359.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
-<text x="189.30" y="352.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">queries</text>
-<path d="M246.60,300.00L246.60,360.00L361.20,360.00L361.20,420.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M365.31,431.27L361.20,420.00L357.09,431.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
-<path d="M275.70,341.00L332.10,341.00L332.10,359.00L275.70,359.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
-<text x="303.90" y="352.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">get/set</text>
 </svg>

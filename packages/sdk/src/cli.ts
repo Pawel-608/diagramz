@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { writeFileSync } from 'node:fs'
-import { resolve } from 'node:path'
+import { resolve, basename } from 'node:path'
 import { pathToFileURL, fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 import { register } from 'node:module'
@@ -17,51 +17,68 @@ const { wasmTargetFactory } = await import('./wasm-canvas.js')
 const { renderToSvg } = await import('./render/loop.js')
 
 const args = process.argv.slice(2)
+const command = args[0]
 
-if (args.length === 0 || args.includes('--help') || args.includes('-h')) {
-  console.log(`Usage: diagramz <input.js> [options]
+function printHelp() {
+  console.log(`Usage: diagramz <command> <input.js> [options]
 
-Options:
-  -o, --output <file>    Output file (default: diagram.png, use .svg for SVG)
-  -e, --engine <name>    Engine: rough | clean (default: rough)
-  -s, --scale <number>   Scale factor (default: 2)
-  -p, --publish          Publish to diagramz.xyz and get a shareable link
+Commands:
+  render <input.js>    Render diagram to PNG or SVG (default)
+  publish <input.js>   Publish to diagramz.xyz and get a shareable link
+
+Render options:
+  -o, --output <file>    Output file (default: diagram.png)
+  -f, --format <fmt>     png | svg (default: guessed from output filename, or png)
+  -e, --engine <name>    rough | clean (default: rough)
+  -s, --scale <number>   Scale factor for PNG (default: 2)
+
+Publish options:
   --api-url <url>        API base URL (default: https://diagramz.xyz)
+
+General:
   -h, --help             Show this help
 
 The input file should export a Diagram as default export or named "diagram".
 
-Example input.js:
-  import { diagram } from 'diagramz'
-  import { rectangle } from 'diagramz/shapes/basic'
+Examples:
+  diagramz render input.js
+  diagramz render input.js -o output.svg
+  diagramz render input.js -f svg -o my-diagram.svg
+  diagramz render input.js -e clean -s 3
+  diagramz publish input.js`)
+}
 
-  const d = diagram("My System")
-  const api = d.add(rectangle("API"))
-  const db = d.add(rectangle("Database"))
-  api.to(db, "queries")
-  export default d`)
+if (args.length === 0 || args.includes('--help') || args.includes('-h')) {
+  printHelp()
   process.exit(args.includes('--help') || args.includes('-h') ? 0 : 1)
 }
 
+if (command !== 'render' && command !== 'publish') {
+  console.error(`Error: Unknown command "${command}". Use "render" or "publish".`)
+  console.error('Run "diagramz --help" for usage.')
+  process.exit(1)
+}
+
+const rest = args.slice(1)
 let inputFile = ''
-let outputFile = 'diagram.png'
+let outputFile = ''
+let format = ''
 let engineName = 'rough'
 let scale = 2
-let publish = false
 let apiUrl = 'https://diagramz.xyz'
 
-for (let i = 0; i < args.length; i++) {
-  const arg = args[i]
+for (let i = 0; i < rest.length; i++) {
+  const arg = rest[i]
   if (arg === '-o' || arg === '--output') {
-    outputFile = args[++i]
+    outputFile = rest[++i]
+  } else if (arg === '-f' || arg === '--format') {
+    format = rest[++i]
   } else if (arg === '-e' || arg === '--engine') {
-    engineName = args[++i]
+    engineName = rest[++i]
   } else if (arg === '-s' || arg === '--scale') {
-    scale = Number(args[++i]) || 2
-  } else if (arg === '-p' || arg === '--publish') {
-    publish = true
+    scale = Number(rest[++i]) || 2
   } else if (arg === '--api-url') {
-    apiUrl = args[++i]
+    apiUrl = rest[++i]
   } else if (!arg.startsWith('-')) {
     inputFile = arg
   }
@@ -70,6 +87,27 @@ for (let i = 0; i < args.length; i++) {
 if (!inputFile) {
   console.error('Error: No input file specified')
   process.exit(1)
+}
+
+// Resolve format: explicit --format wins, then guess from output filename, then default png
+function resolveFormat(): 'png' | 'svg' {
+  if (format === 'svg') return 'svg'
+  if (format === 'png') return 'png'
+  if (format) {
+    console.error(`Error: Unknown format "${format}". Use "png" or "svg".`)
+    process.exit(1)
+  }
+  if (outputFile) {
+    if (outputFile.endsWith('.svg')) return 'svg'
+    if (outputFile.endsWith('.png')) return 'png'
+  }
+  return 'png'
+}
+
+// Default output filename from input: input.js → input.png/svg
+function defaultOutput(fmt: 'png' | 'svg'): string {
+  const base = basename(inputFile).replace(/\.[^.]+$/, '')
+  return `${base}.${fmt}`
 }
 
 const fullPath = resolve(inputFile)
@@ -91,7 +129,7 @@ if (!d || !(d instanceof Diagram)) {
   process.exit(1)
 }
 
-if (publish) {
+if (command === 'publish') {
   const json = d.toJSON()
   const res = await fetch(`${apiUrl}/api/v1/diagrams`, {
     method: 'POST',
@@ -110,12 +148,13 @@ if (publish) {
   console.log(`  PNG:     ${apiUrl}/d/${id}/png`)
   console.log(`  SVG:     ${apiUrl}/d/${id}/svg`)
 } else {
-  const engine = engineName === 'clean' ? new CleanEngine() : new RoughEngine()
-  const isSvg = outputFile.endsWith('.svg')
+  const fmt = resolveFormat()
+  if (!outputFile) outputFile = defaultOutput(fmt)
 
+  const engine = engineName === 'clean' ? new CleanEngine() : new RoughEngine()
   const wrapCanvas = (t: import('./engines/canvas.js').Canvas) => engine.createCanvas(t)
 
-  if (isSvg) {
+  if (fmt === 'svg') {
     const svg = renderToSvg(d, wrapCanvas)
     writeFileSync(outputFile, svg)
     console.log(`Rendered ${outputFile} (${svg.length} bytes)`)

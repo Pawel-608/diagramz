@@ -1,5 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1086" height="1038" viewBox="0 0 1086 1038">
 <rect width="1086" height="1038" fill="#fff"/>
+<path d="M534.36,182.00L534.36,383.00L564.71,383.00L564.71,584.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M568.82,595.27L564.71,584.00L560.60,595.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M445.73,364.00L653.33,364.00L653.33,382.00L445.73,382.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="549.53" y="375.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">POST/PATCH diagrams via REST</text>
+<path d="M271.44,182.00L271.44,247.00L161.50,247.00L161.50,312.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M165.61,323.27L161.50,312.00L157.39,323.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M141.47,228.00L291.47,228.00L291.47,246.00L141.47,246.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="216.47" y="239.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Builds diagrams with</text>
+<path d="M865.40,182.00L865.40,312.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M869.51,323.27L865.40,312.00L861.29,323.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M776.00,228.00L954.80,228.00L954.80,246.00L776.00,246.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="865.40" y="239.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Views and edits diagrams</text>
+<path d="M769.43,454.00L769.43,519.00L723.89,519.00L723.89,584.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M728.00,595.27L723.89,584.00L719.78,595.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M671.66,500.00L821.66,500.00L821.66,518.00L671.66,518.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="746.66" y="511.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Fetches diagram data</text>
+<path d="M961.37,454.00L961.37,655.00L875.42,655.00L875.42,856.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M879.53,867.27L875.42,856.00L871.31,867.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M857.80,636.00L979.00,636.00L979.00,654.00L857.80,654.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="918.40" y="647.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Renders via WASM</text>
+<path d="M723.89,726.00L723.89,791.00L710.78,791.00L710.78,856.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M714.89,867.27L710.78,856.00L706.67,867.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M660.34,772.00L774.34,772.00L774.34,790.00L660.34,790.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="717.34" y="783.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Renders PNG/SVG</text>
+<path d="M564.71,726.00L564.71,791.00L495.50,791.00L495.50,856.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M499.61,867.27L495.50,856.00L491.39,867.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M451.50,772.00L608.71,772.00L608.71,790.00L451.50,790.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="530.11" y="783.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Reads/writes diagrams</text>
 <path d="M225.10,40.00L580.70,40.00C586.22,40.00 590.70,44.48 590.70,50.00L590.70,172.00C590.70,177.52 586.22,182.00 580.70,182.00L225.10,182.00C219.58,182.00 215.10,177.52 215.10,172.00L215.10,50.00C215.10,44.48 219.58,40.00 225.10,40.00Z" fill="rgb(8,66,123)" stroke="none"/>
 <path d="M225.10,40.00L580.70,40.00C586.22,40.00 590.70,44.48 590.70,50.00L590.70,172.00C590.70,177.52 586.22,182.00 580.70,182.00L225.10,182.00C219.58,182.00 215.10,177.52 215.10,172.00L215.10,50.00C215.10,44.48 219.58,40.00 225.10,40.00Z" fill="none" stroke="rgb(255,255,255)" stroke-width="2.00" stroke-linecap="round"/>
 <text x="402.90" y="106.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">AI Agent</text>
@@ -51,32 +79,4 @@
 <text x="161.50" y="378.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Diagrams-as-code library.</text>
 <text x="161.50" y="394.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Published to npm.</text>
 <text x="161.50" y="442.00" fill="rgb(255,255,255)" font-family="&quot;Nunito&quot;, sans-serif" font-size="10.0" text-anchor="middle" dominant-baseline="central">[External Software System]</text>
-<path d="M402.90,182.00L402.90,282.50L644.30,282.50L644.30,383.00L644.30,584.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M648.41,595.27L644.30,584.00L640.19,595.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
-<path d="M419.80,364.00L627.40,364.00L627.40,382.00L419.80,382.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
-<text x="523.60" y="375.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">POST/PATCH diagrams via REST</text>
-<path d="M402.90,182.00L402.90,247.00L161.50,247.00L161.50,312.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M165.61,323.27L161.50,312.00L157.39,323.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
-<path d="M207.20,228.00L357.20,228.00L357.20,246.00L207.20,246.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
-<text x="282.20" y="239.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Builds diagrams with</text>
-<path d="M865.40,182.00L865.40,312.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M869.51,323.27L865.40,312.00L861.29,323.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
-<path d="M776.00,228.00L954.80,228.00L954.80,246.00L776.00,246.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
-<text x="865.40" y="239.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Views and edits diagrams</text>
-<path d="M865.40,454.00L865.40,519.00L644.30,519.00L644.30,584.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M648.41,595.27L644.30,584.00L640.19,595.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
-<path d="M679.85,500.00L829.85,500.00L829.85,518.00L679.85,518.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
-<text x="754.85" y="511.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Fetches diagram data</text>
-<path d="M865.40,454.00L865.40,554.50L842.00,554.50L842.00,655.00L842.00,755.50L793.10,755.50L793.10,856.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M797.21,867.27L793.10,856.00L788.99,867.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
-<path d="M768.65,636.00L889.85,636.00L889.85,654.00L768.65,654.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
-<text x="829.25" y="647.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Renders via WASM</text>
-<path d="M644.30,726.00L644.30,791.00L793.10,791.00L793.10,856.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M797.21,867.27L793.10,856.00L788.99,867.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
-<path d="M661.70,772.00L775.70,772.00L775.70,790.00L661.70,790.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
-<text x="718.70" y="783.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Renders PNG/SVG</text>
-<path d="M644.30,726.00L644.30,791.00L495.50,791.00L495.50,856.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M499.61,867.27L495.50,856.00L491.39,867.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
-<path d="M491.30,772.00L648.50,772.00L648.50,790.00L491.30,790.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
-<text x="569.90" y="783.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">Reads/writes diagrams</text>
 </svg>

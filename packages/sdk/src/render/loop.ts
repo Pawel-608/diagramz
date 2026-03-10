@@ -1,6 +1,7 @@
 import type { Diagram } from '../core/diagram.js'
 import type { Canvas, RenderTarget, RenderTargetFactory } from '../engines/canvas.js'
 import { SvgTarget, svgTargetFactory } from '../engines/svg-canvas.js'
+import { assignConnectionPorts } from '../render/connections.js'
 import { Shape, resolveSize } from '../core/shape.js'
 import { Group } from '../core/group.js'
 import { DefaultPathBuilder } from '../core/path.js'
@@ -185,6 +186,9 @@ function renderInternal(
   for (let i = groups.length - 1; i >= 0; i--) {
     groups[i].render(canvas, offsetX, offsetY)
   }
+
+  // Assign spread port positions so connections don't overlap
+  assignConnectionPorts(diagram.connections)
 
   // Render connections BEFORE shapes so they appear behind nodes
   const offset = { x: offsetX, y: offsetY }

@@ -30,6 +30,10 @@ export class Connection {
   readonly strokeDash?: number[]
   /** Set by layout — intermediate route points for multi-layer edges */
   waypoints: { x: number; y: number }[] = []
+  /** Set by port assignment — fractional position (0–1) along exit side */
+  fromPort: number = 0.5
+  /** Set by port assignment — fractional position (0–1) along entry side */
+  toPort: number = 0.5
 
   constructor(id: string, from: Node, target: Node, label?: string, opts?: ConnectionOpts) {
     this.id = id
@@ -43,7 +47,7 @@ export class Connection {
   }
 
   render(canvas: Canvas, offset: { x: number; y: number }): void {
-    const route = orthogonalRoute(this.from, this.target, offset, this.waypoints ?? [])
+    const route = orthogonalRoute(this.from, this.target, offset, this.waypoints ?? [], this.fromPort, this.toPort)
     const { from: fromPt, to: toPt, path: linePath, angle } = route
 
     const color = parseColor(this.color ?? '#333333')

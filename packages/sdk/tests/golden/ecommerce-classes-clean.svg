@@ -1,5 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="986" height="774" viewBox="0 0 986 774">
 <rect width="986" height="774" fill="#fff"/>
+<path d="M423.49,154.00L423.49,234.00L165.20,234.00L165.20,314.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round" stroke-dasharray="6 6"/>
+<path d="M169.31,325.27L165.20,314.00L161.09,325.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M266.15,215.00L322.55,215.00L322.55,233.00L266.15,233.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="294.35" y="226.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">creates</text>
+<path d="M508.40,154.00L508.40,334.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M508.40,154.00L512.00,146.00L508.40,138.00L504.80,146.00Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M508.40,154.00L512.00,146.00L508.40,138.00L504.80,146.00Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M593.31,154.00L593.31,244.00L836.00,244.00L836.00,334.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M593.31,154.00L596.91,146.00L593.31,138.00L589.71,146.00Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M593.31,154.00L596.91,146.00L593.31,138.00L589.71,146.00Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M165.20,446.00L165.20,606.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M165.20,446.00L168.80,438.00L165.20,430.00L161.60,438.00Z" fill="rgb(51,51,51)" stroke="none"/>
+<path d="M165.20,446.00L168.80,438.00L165.20,430.00L161.60,438.00Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.00" stroke-linecap="round"/>
 <path d="M40.00,314.00L290.40,314.00L290.40,446.00L40.00,446.00Z" fill="rgb(187,222,251)" stroke="none"/>
 <path d="M40.00,314.00L290.40,314.00L290.40,446.00L40.00,446.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
 <text x="165.20" y="329.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">Order</text>
@@ -45,17 +58,4 @@
 <path d="M726.40,384.00L945.60,384.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
 <text x="820.80" y="396.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+charge(amount): Payment</text>
 <text x="795.60" y="414.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+refund(id): void</text>
-<path d="M387.10,97.00L338.75,97.00L338.75,380.00L290.40,380.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round" stroke-dasharray="6 6"/>
-<path d="M279.13,384.11L290.40,380.00L279.13,375.89" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
-<path d="M310.55,219.50L366.95,219.50L366.95,237.50L310.55,237.50Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
-<text x="338.75" y="230.50" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">creates</text>
-<path d="M508.40,154.00L508.40,334.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M508.40,154.00L512.00,146.00L508.40,138.00L504.80,146.00Z" fill="rgb(255,255,255)" stroke="none"/>
-<path d="M508.40,154.00L512.00,146.00L508.40,138.00L504.80,146.00Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M629.70,97.00L678.05,97.00L678.05,380.00L726.40,380.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M629.70,97.00L621.70,93.40L613.70,97.00L621.70,100.60Z" fill="rgb(255,255,255)" stroke="none"/>
-<path d="M629.70,97.00L621.70,93.40L613.70,97.00L621.70,100.60Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M165.20,446.00L165.20,606.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M165.20,446.00L168.80,438.00L165.20,430.00L161.60,438.00Z" fill="rgb(51,51,51)" stroke="none"/>
-<path d="M165.20,446.00L168.80,438.00L165.20,430.00L161.60,438.00Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.00" stroke-linecap="round"/>
 </svg>

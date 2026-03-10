@@ -1,6 +1,7 @@
 import { Shape, resolveSize } from '../core/shape.js'
 import { Group } from '../core/group.js'
 import type { Node } from '../core/node.js'
+import type { Connection } from '../core/connection.js'
 import { DefaultPathBuilder } from '../core/path.js'
 
 export interface Point {
@@ -129,16 +130,17 @@ export function labelPosition(from: Point, to: Point): Point {
 
 type Side = 'top' | 'bottom' | 'left' | 'right'
 
-function nodeSidePoint(node: Node, side: Side, offset: Point): Point {
+/** port: 0–1 fractional position along the side (0.5 = center) */
+function nodeSidePoint(node: Node, side: Side, offset: Point, port: number = 0.5): Point {
   if (node instanceof Shape) {
     const [w, h] = resolveSize(node)
     const x = (node.x ?? 0) + offset.x
     const y = (node.y ?? 0) + offset.y
     switch (side) {
-      case 'top': return { x: x + w / 2, y }
-      case 'bottom': return { x: x + w / 2, y: y + h }
-      case 'left': return { x, y: y + h / 2 }
-      case 'right': return { x: x + w, y: y + h / 2 }
+      case 'top': return { x: x + w * port, y }
+      case 'bottom': return { x: x + w * port, y: y + h }
+      case 'left': return { x, y: y + h * port }
+      case 'right': return { x: x + w, y: y + h * port }
     }
   }
   if (node instanceof Group) {
@@ -147,10 +149,10 @@ function nodeSidePoint(node: Node, side: Side, offset: Point): Point {
       const x = b.x + offset.x
       const y = b.y + offset.y
       switch (side) {
-        case 'top': return { x: x + b.w / 2, y }
-        case 'bottom': return { x: x + b.w / 2, y: y + b.h }
-        case 'left': return { x, y: y + b.h / 2 }
-        case 'right': return { x: x + b.w, y: y + b.h / 2 }
+        case 'top': return { x: x + b.w * port, y }
+        case 'bottom': return { x: x + b.w * port, y: y + b.h }
+        case 'left': return { x, y: y + b.h * port }
+        case 'right': return { x: x + b.w, y: y + b.h * port }
       }
     }
   }
@@ -172,31 +174,33 @@ export interface OrthogonalRoute {
   midPoint: Point
 }
 
+export function determineSides(from: Node, to: Node): { fromSide: Side; toSide: Side } {
+  const fromCenter = nodeCenter(from)
+  const toCenter = nodeCenter(to)
+  const dx = toCenter.x - fromCenter.x
+  const dy = toCenter.y - fromCenter.y
+  if (Math.abs(dy) >= 20) {
+    return dy > 0
+      ? { fromSide: 'bottom', toSide: 'top' }
+      : { fromSide: 'top', toSide: 'bottom' }
+  }
+  return dx > 0
+    ? { fromSide: 'right', toSide: 'left' }
+    : { fromSide: 'left', toSide: 'right' }
+}
+
 export function orthogonalRoute(
   from: Node,
   to: Node,
   offset: Point,
   waypoints: { x: number; y: number }[],
+  fromPort: number = 0.5,
+  toPort: number = 0.5,
 ): OrthogonalRoute {
-  const fromCenter = nodeCenter(from)
-  const toCenter = nodeCenter(to)
-  const dx = toCenter.x - fromCenter.x
-  const dy = toCenter.y - fromCenter.y
+  const { fromSide, toSide } = determineSides(from, to)
 
-  // Strongly prefer vertical exits (top/bottom) so horizontal routing
-  // segments stay in the gaps between layers, avoiding intermediate nodes.
-  // Only use horizontal exits when nodes are on the same layer (tiny dy).
-  let fromSide: Side, toSide: Side
-  if (Math.abs(dy) >= 20) {
-    if (dy > 0) { fromSide = 'bottom'; toSide = 'top' }
-    else { fromSide = 'top'; toSide = 'bottom' }
-  } else {
-    if (dx > 0) { fromSide = 'right'; toSide = 'left' }
-    else { fromSide = 'left'; toSide = 'right' }
-  }
-
-  const fromPt = nodeSidePoint(from, fromSide, offset)
-  const toPt = nodeSidePoint(to, toSide, offset)
+  const fromPt = nodeSidePoint(from, fromSide, offset, fromPort)
+  const toPt = nodeSidePoint(to, toSide, offset, toPort)
 
   // Build list of all points to route through
   const points: Point[] = [fromPt]
@@ -234,4 +238,58 @@ export function orthogonalRoute(
   }
 
   return { from: fromPt, to: toPt, path: pb.build(), angle, midPoint }
+}
+
+/**
+ * Assign spread port positions so connections sharing a node side
+ * don't all exit/enter at the exact same point.
+ * Sorts by the other end's position to minimise crossings.
+ */
+export function assignConnectionPorts(connections: Connection[]): void {
+  // Group connections by (nodeId, side) for both ends
+  interface Entry { conn: Connection; role: 'from' | 'to'; otherCenter: Point }
+  const groups = new Map<string, Entry[]>()
+
+  for (const conn of connections) {
+    const { fromSide, toSide } = determineSides(conn.from, conn.target)
+    const fromKey = `${conn.from.id}:${fromSide}`
+    const toKey = `${conn.target.id}:${toSide}`
+
+    if (!groups.has(fromKey)) groups.set(fromKey, [])
+    groups.get(fromKey)!.push({ conn, role: 'from', otherCenter: nodeCenter(conn.target) })
+
+    if (!groups.has(toKey)) groups.set(toKey, [])
+    groups.get(toKey)!.push({ conn, role: 'to', otherCenter: nodeCenter(conn.from) })
+  }
+
+  // Reset all ports to center
+  for (const conn of connections) {
+    conn.fromPort = 0.5
+    conn.toPort = 0.5
+  }
+
+  for (const [key, entries] of groups) {
+    if (entries.length <= 1) continue
+
+    const side = key.split(':').pop() as Side
+    const isHorizontalSide = side === 'top' || side === 'bottom'
+
+    // Sort by the other end's position to minimise crossings
+    // For top/bottom sides: sort by other node's X
+    // For left/right sides: sort by other node's Y
+    entries.sort((a, b) =>
+      isHorizontalSide
+        ? a.otherCenter.x - b.otherCenter.x
+        : a.otherCenter.y - b.otherCenter.y
+    )
+
+    const n = entries.length
+    const pad = 0.15 // 15% margin from edges
+    for (let i = 0; i < n; i++) {
+      const port = pad + (1 - 2 * pad) * i / (n - 1)
+      const { conn, role } = entries[i]
+      if (role === 'from') conn.fromPort = port
+      else conn.toPort = port
+    }
+  }
 }

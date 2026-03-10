@@ -6,6 +6,34 @@
 <path d="M40.00,845.00L576.00,845.00L576.00,945.00L40.00,945.00Z" fill="rgb(245,247,250)" stroke="none"/>
 <path d="M40.00,845.00L576.00,845.00L576.00,945.00L40.00,945.00Z" fill="none" stroke="rgb(148,163,184)" stroke-width="1.00" stroke-linecap="round"/>
 <text x="48.00" y="861.00" fill="rgb(148,163,184)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">basic connections</text>
+<path d="M1131.70,572.00L1131.70,452.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round" stroke-dasharray="6 6"/>
+<path d="M1131.70,452.00L1127.03,440.95L1136.37,440.95Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M1131.70,452.00L1127.03,440.95L1136.37,440.95Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M152.80,865.00L152.80,800.50L1065.90,800.50L1065.90,736.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M1065.90,736.00L1061.23,724.95L1070.57,724.95Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M1065.90,736.00L1061.23,724.95L1070.57,724.95Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M430.80,865.00L430.80,800.50L1087.83,800.50L1087.83,736.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M1087.83,736.00L1083.16,724.95L1092.51,724.95Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M1087.83,736.00L1083.16,724.95L1092.51,724.95Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M782.90,865.00L782.90,800.50L1109.77,800.50L1109.77,736.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M1109.77,736.00L1105.09,724.95L1114.44,724.95Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M1109.77,736.00L1105.09,724.95L1114.44,724.95Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M1116.70,856.00L1116.70,796.00L1131.70,796.00L1131.70,736.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M1131.70,736.00L1127.03,724.95L1136.37,724.95Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M1131.70,736.00L1127.03,724.95L1136.37,724.95Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M1446.60,865.00L1446.60,800.50L1153.63,800.50L1153.63,736.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M1153.63,736.00L1148.96,724.95L1158.31,724.95Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M1153.63,736.00L1148.96,724.95L1158.31,724.95Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M1772.60,865.00L1772.60,800.50L1175.57,800.50L1175.57,736.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M1175.57,736.00L1170.89,724.95L1180.24,724.95Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M1175.57,736.00L1170.89,724.95L1180.24,724.95Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M2090.80,856.00L2090.80,796.00L1197.50,796.00L1197.50,736.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M1197.50,736.00L1192.83,724.95L1202.17,724.95Z" fill="rgb(255,255,255)" stroke="none"/>
+<path d="M1197.50,736.00L1192.83,724.95L1202.17,724.95Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
+<path d="M1131.70,114.00L1131.70,234.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round" stroke-dasharray="6 6"/>
+<path d="M1135.81,245.27L1131.70,234.00L1127.59,245.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
+<path d="M999.10,155.00L1264.30,155.00L1264.30,173.00L999.10,173.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
+<text x="1131.70" y="166.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">calls dashed/sourceDecor/targetDecor</text>
 <path d="M971.40,234.00L1292.00,234.00L1292.00,452.00L971.40,452.00Z" fill="rgb(187,222,251)" stroke="none"/>
 <path d="M971.40,234.00L1292.00,234.00L1292.00,452.00L971.40,452.00Z" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00" stroke-linecap="round"/>
 <text x="1131.70" y="264.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="16.0" text-anchor="middle" dominant-baseline="central">Connection</text>
@@ -84,32 +112,4 @@
 <path d="M905.10,84.00L1358.30,84.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
 <path d="M905.10,90.00L1358.30,90.00" fill="none" stroke="rgb(0,0,0)" stroke-width="1.00" stroke-linecap="round"/>
 <text x="1107.50" y="102.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">+renderConnection(path, conn, from, to, angle, canvas)</text>
-<path d="M1131.70,572.00L1131.70,452.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round" stroke-dasharray="6 6"/>
-<path d="M1131.70,452.00L1127.03,440.95L1136.37,440.95Z" fill="rgb(255,255,255)" stroke="none"/>
-<path d="M1131.70,452.00L1127.03,440.95L1136.37,440.95Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M245.60,895.00L641.65,895.00L641.65,654.00L1037.70,654.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M1037.70,654.00L1048.75,649.33L1048.75,658.67Z" fill="rgb(255,255,255)" stroke="none"/>
-<path d="M1037.70,654.00L1048.75,649.33L1048.75,658.67Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M556.00,895.00L796.85,895.00L796.85,654.00L1037.70,654.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M1037.70,654.00L1048.75,649.33L1048.75,658.67Z" fill="rgb(255,255,255)" stroke="none"/>
-<path d="M1037.70,654.00L1048.75,649.33L1048.75,658.67Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M919.80,895.00L978.75,895.00L978.75,654.00L1037.70,654.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M1037.70,654.00L1048.75,649.33L1048.75,658.67Z" fill="rgb(255,255,255)" stroke="none"/>
-<path d="M1037.70,654.00L1048.75,649.33L1048.75,658.67Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M1116.70,856.00L1116.70,796.00L1131.70,796.00L1131.70,736.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M1131.70,736.00L1127.03,724.95L1136.37,724.95Z" fill="rgb(255,255,255)" stroke="none"/>
-<path d="M1131.70,736.00L1127.03,724.95L1136.37,724.95Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M1313.60,895.00L1269.65,895.00L1269.65,654.00L1225.70,654.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M1225.70,654.00L1214.65,658.67L1214.65,649.33Z" fill="rgb(255,255,255)" stroke="none"/>
-<path d="M1225.70,654.00L1214.65,658.67L1214.65,649.33Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M1639.60,895.00L1432.65,895.00L1432.65,654.00L1225.70,654.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M1225.70,654.00L1214.65,658.67L1214.65,649.33Z" fill="rgb(255,255,255)" stroke="none"/>
-<path d="M1225.70,654.00L1214.65,658.67L1214.65,649.33Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M1965.60,895.00L1595.65,895.00L1595.65,654.00L1225.70,654.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M1225.70,654.00L1214.65,658.67L1214.65,649.33Z" fill="rgb(255,255,255)" stroke="none"/>
-<path d="M1225.70,654.00L1214.65,658.67L1214.65,649.33Z" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round"/>
-<path d="M1131.70,114.00L1131.70,234.00" fill="none" stroke="rgb(51,51,51)" stroke-width="1.50" stroke-linecap="round" stroke-dasharray="6 6"/>
-<path d="M1135.81,245.27L1131.70,234.00L1127.59,245.27" fill="none" stroke="rgb(51,51,51)" stroke-width="2.00" stroke-linecap="round"/>
-<path d="M999.10,155.00L1264.30,155.00L1264.30,173.00L999.10,173.00Z" fill="rgba(248,248,248,0.878)" stroke="none"/>
-<text x="1131.70" y="166.00" fill="rgb(0,0,0)" font-family="&quot;Nunito&quot;, sans-serif" font-size="12.0" text-anchor="middle" dominant-baseline="central">calls dashed/sourceDecor/targetDecor</text>
 </svg>
