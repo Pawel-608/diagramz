@@ -25,6 +25,8 @@ Options:
   -o, --output <file>    Output file (default: diagram.png, use .svg for SVG)
   -e, --engine <name>    Engine: rough | clean (default: rough)
   -s, --scale <number>   Scale factor (default: 2)
+  -p, --publish          Publish to diagramz.xyz and get a shareable link
+  --api-url <url>        API base URL (default: https://diagramz.xyz)
   -h, --help             Show this help
 
 The input file should export a Diagram as default export or named "diagram".
@@ -45,6 +47,8 @@ let inputFile = ''
 let outputFile = 'diagram.png'
 let engineName = 'rough'
 let scale = 2
+let publish = false
+let apiUrl = 'https://diagramz.xyz'
 
 for (let i = 0; i < args.length; i++) {
   const arg = args[i]
@@ -54,6 +58,10 @@ for (let i = 0; i < args.length; i++) {
     engineName = args[++i]
   } else if (arg === '-s' || arg === '--scale') {
     scale = Number(args[++i]) || 2
+  } else if (arg === '-p' || arg === '--publish') {
+    publish = true
+  } else if (arg === '--api-url') {
+    apiUrl = args[++i]
   } else if (!arg.startsWith('-')) {
     inputFile = arg
   }
@@ -83,17 +91,37 @@ if (!d || !(d instanceof Diagram)) {
   process.exit(1)
 }
 
-const engine = engineName === 'clean' ? new CleanEngine() : new RoughEngine()
-const isSvg = outputFile.endsWith('.svg')
-
-const wrapCanvas = (t: import('./engines/canvas.js').Canvas) => engine.createCanvas(t)
-
-if (isSvg) {
-  const svg = renderToSvg(d, wrapCanvas)
-  writeFileSync(outputFile, svg)
-  console.log(`Rendered ${outputFile} (${svg.length} bytes)`)
+if (publish) {
+  const json = d.toJSON()
+  const res = await fetch(`${apiUrl}/api/v1/diagrams`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ data: json }),
+  })
+  if (!res.ok) {
+    const err = await res.text()
+    console.error(`Error: Failed to publish (${res.status})`)
+    console.error(err)
+    process.exit(1)
+  }
+  const { id, url } = await res.json() as { id: string; url: string }
+  console.log(`Published: ${apiUrl}${url}`)
+  console.log(`  View:    ${apiUrl}/d/${id}`)
+  console.log(`  PNG:     ${apiUrl}/d/${id}/png`)
+  console.log(`  SVG:     ${apiUrl}/d/${id}/svg`)
 } else {
-  const png = engine.render(d, wasmTargetFactory, { scale })
-  writeFileSync(outputFile, png)
-  console.log(`Rendered ${outputFile} (${png.length} bytes)`)
+  const engine = engineName === 'clean' ? new CleanEngine() : new RoughEngine()
+  const isSvg = outputFile.endsWith('.svg')
+
+  const wrapCanvas = (t: import('./engines/canvas.js').Canvas) => engine.createCanvas(t)
+
+  if (isSvg) {
+    const svg = renderToSvg(d, wrapCanvas)
+    writeFileSync(outputFile, svg)
+    console.log(`Rendered ${outputFile} (${svg.length} bytes)`)
+  } else {
+    const png = engine.render(d, wasmTargetFactory, { scale })
+    writeFileSync(outputFile, png)
+    console.log(`Rendered ${outputFile} (${png.length} bytes)`)
+  }
 }
